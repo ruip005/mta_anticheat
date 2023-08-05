@@ -149,7 +149,8 @@ outros = {
 		iplevel = "não funciona ainda", -- em manutenção
 		banir = false, -- em manutenção - não funciona ainda
 	},
-	update = true, -- receber atualizações do anticheat » Pasta Updates se tiver uma versão recente faça a troca de versões.
+	update = true, -- receber atualizações do anticheat » Pasta Updates se tiver uma versão recente faça a troca de versões. [Quando está desativado a nova atualização não é baixada automaticamente]
+	chat = true, -- aparece mensagem no chat quando dá start no anticheat
 	globalban = true, --[[
 	Sistema de banimento global o que é?
 	Este sistema faz sincronização com outros servidores e guarda o ban aplicado por o mesmo anticheat no servidor1 e se o jogador xitado tentar se conectar
