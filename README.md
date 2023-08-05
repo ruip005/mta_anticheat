@@ -1,9 +1,41 @@
 ![uW33D Anticheat.](https://cdn.discordapp.com/attachments/1110700176361918545/1137505212903456808/AC.png "Anticheat")
 
-**Anticheat para MTA (Multi Theft Auto)**
+# **Anticheat para MTA (Multi Theft Auto)**
 
 Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório destina-se a abrigar o desenvolvimento de um sistema anticheat para melhorar a integridade e a equidade do jogo no ambiente multiplayer do MTA.
 
+## Auth
+
+### Autenticação para iniciar o anticheat.
+
+| Var   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `user` | `string` | **Obrigatório**. O nome de usuário |
+| `key` | `string` | **Obrigatório**. A chave de ativação do usuário |
+
+
+### Algumas autenticações gratuitas.
+
+1.
+**user**: `trial01`
+
+**key**: `f8e2a1388546f9313ad7ac965a4e5990061b2d2dfd4a0e5f9b635799986fdd85`
+
+2.
+**user**: `trial02`
+
+**key**: `a0b27debfdda2cb2e99f4faf47b8f6b7b758b0c1c36f53d42078d9df9212c252`
+
+3.
+**user**: `trial03`
+
+**key**: `656f0a57cb751e8f55779b991ba4ea016e870b68f2d86271dfe0701bfe70f300`
+
+4.
+**user**: `trial04`
+
+**key**: `c7b3c6f54b54ee10e915b0260bb82efbeb5aa5822b4c820526677f0123a779c2`
+ 
 ## Visão Geral
 
 O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi Theft Auto. O anticheat visa detectar e prevenir trapaças, hacks e outras atividades fraudulentas que possam afetar negativamente a experiência de jogo dos jogadores.
