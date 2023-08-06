@@ -134,6 +134,7 @@ ac = {
 	bans = { -- true ou false
 		armas = true, -- banir quem usar armas blacklist
 		veiculos = true, -- banir quem entrar em veiculos blacklist (mesmo desativado a função de detectar veiculos puxados pelo vbr estara ativa ex:. puxar hydra)
+		invisibleGun = true, -- banir quem usar arma invisivel
 	},
 }
 
