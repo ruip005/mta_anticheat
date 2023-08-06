@@ -1,9 +1,9 @@
 <meta>
 
-    <info author = 'uW33D' name = 'Anticheat privado' version="1.2.17U"/>
+    <info author = 'uW33D' name = 'Anticheat MTA' version="1.2.17.1S"/>
     
-    <script src = "sMain.lua" type = "server"/>
-    <script src = "cMain.lua" type = "client"/>
+    <script src = "sMain.luac" type = "server"/>
+    <script src = "cMain.luac" type = "client"/>
     <script src = "gMain.lua" type = "shared"/>
 
     <min_mta_version server="1.5.7-9.20307" client="1.5.7-9.20307" />

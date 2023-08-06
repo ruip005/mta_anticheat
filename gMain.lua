@@ -56,6 +56,9 @@ sᴛᴀᴛᴜs ᴅᴏ ᴀɴᴛɪᴄʜᴇᴀᴛ:  https://stats.uptimerobot.com/R
 ᴏʙs: ғᴜɴᴄ̧ᴏ̃ᴇs ᴇᴍ ʙᴇᴛᴀ ɴᴀ̃ᴏ ᴇsᴛᴀ̃ᴏ ᴀ 100%, ᴘᴏʀ ɪssᴏ ᴛᴇᴍ ᴄᴀsᴏ ǫᴜᴇ ᴘᴏᴅᴇ ᴅᴀʀ ʙᴀɴ ᴇʀʀᴀᴅᴏ, ᴏᴜ ɴᴀ̃ᴏ ғᴜɴᴄɪᴏɴᴀʀ ᴅɪʀᴇɪᴛᴏ
 ᴄᴏᴍᴀɴᴅᴏs: /ᴜɴʙᴀɴᴀʟʟ, /ᴛᴏᴅᴏsᴄᴏᴍᴀɴᴅᴏs, /ᴄᴏᴍᴀɴᴅᴏs [ɴᴏᴍᴇᴅᴏᴍᴏᴅ], /ᴠᴇʀᴘᴀᴛʜ [ɴᴏᴍᴇᴅᴏᴍᴏᴅ], /ᴡᴀʟʟ, /ᴀᴄɪ [ID] (esse comando faz que o jogador esteja ignorado no binds)
 
+Video de como configurar o anticheat: https://youtu.be/XuNNihYl7KE
+Repositório do anticheat: https://github.com/ruip005/mta_anticheat
+
 ]]
 
 auth = { 
@@ -144,12 +147,11 @@ outros = {
 	bandono = true, --banir quem tentar banir os staffs com cargo de servidor.admin (ex.: Admin) [false irá apenas nao deixar o jogador ser banido]
 	antivpn = { -- AntiVPN System
 		ativado = false, -- quando ativo detecta se o jogador esta ligado a uma vpn se estiver dá kick
-		apikey = "", -- se estiver ativo coloque sua key da api https://www.ipqualityscore.com/documentation/proxy-detection/overview [Proxy & VPN Detection API]
-		logchute = "não funciona ainda", -- em manutenção 
-		iplevel = "não funciona ainda", -- em manutenção
-		banir = false, -- em manutenção - não funciona ainda
+		apikey = "9uVA2lVd1iplBNAJZ46tafdehM2pgsDJ", -- se estiver ativo coloque sua key da api https://www.ipqualityscore.com/documentation/proxy-detection/overview [Proxy & VPN Detection API]
+		banvpn = false, -- true = bane por 1 minuto, false dá kick
 	},
-	update = true, -- receber atualizações do anticheat » Pasta Updates se tiver uma versão recente faça a troca de versões.
+	update = true, -- receber atualizações do anticheat » Pasta Updates se tiver uma versão recente faça a troca de versões. [Quando está desativado a nova atualização não é baixada automaticamente]
+	chat = true, -- aparece mensagem no chat quando dá start no anticheat
 	globalban = true, --[[
 	Sistema de banimento global o que é?
 	Este sistema faz sincronização com outros servidores e guarda o ban aplicado por o mesmo anticheat no servidor1 e se o jogador xitado tentar se conectar
