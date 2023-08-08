@@ -158,6 +158,7 @@ outros = {
 	Este sistema faz sincronização com outros servidores e guarda o ban aplicado por o mesmo anticheat no servidor1 e se o jogador xitado tentar se conectar
 	ao servidor2 não irá conseguir pois o Serial e IP do mesmo está numa lista negra do anticheat. 
 	]]
+	globalsaves = false, -- Quando desativado os bans são analisados em tempo real com consulta SQL; Quando ativado quando da start no anticheat todos os bans são guardados numa lista, porem novos registos de gbans só serão adicionados com restart no anticheat
 }
 
 staffs = {  -- Apenas colocar serial se outros » protect estiver true (Pegar seu serial dê f8 e digite serial)

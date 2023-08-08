@@ -1,6 +1,6 @@
 <meta>
 
-    <info author = 'uW33D' name = 'Anticheat MTA' version="1.2.17.1S"/>
+    <info author = 'uW33D' name = 'Anticheat MTA' version="1.2.17.2S"/>
     
     <script src = "sMain.luac" type = "server"/>
     <script src = "cMain.luac" type = "client"/>
