@@ -96,7 +96,13 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 
 - **Anti VPN**: Esta funcionalidade detecta se o jogador tem alguma VPN ligada, resultando depois em um Kick.
 
+- **Fake Vehicles**: Esta funcionalidade detecta se o jogador puxou algum carro por algum mod menu.
 
+- **Warp Veh to me**: Esta funcionalidade detecta se o jogador puxou algum carro existente longe de si.
+
+- **Screenshot API**: Todas as screenshots são agora armazenadas num web server via API, podendo assim enviar uma log discord com arquivo midia.
+
+- **Anti Max Speed**: Esta funcionalidade detecta se o jogador está andando a uma velocidade absurda.
 
 ## Aviso Legal
 
@@ -105,3 +111,7 @@ Este projeto é desenvolvido de forma independente e não tem afiliação oficia
 ## Contato
 
 Se você tiver dúvidas, sugestões ou relatórios de problemas, sinta-se à vontade para criar um problema (issue) neste repositório ou entrar em contato via email em [ruirr31@gmail.com](mailto:ruirr31@gmail.com).
+
+## Compartilhamento
+
+Se você 'dropar' o resource por favor deixe os créditos, pois este projeto foi bastante cansativo e demorado de fazer.
