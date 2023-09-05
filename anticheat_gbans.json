@@ -1,6 +1,4 @@
 [
-{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
-{"type":"database","name":"dbresources"},
 {"type":"table","name":"anticheat_gbans","database":"dbresources","data":
 [
 {"id":"2","nickname":null,"serial":"86D45B5C2B2F0B345DCBA8921A846334","ipv4":null,"gban":"1","autor":"GBAN","motivo":"VBR CHEAT"},
