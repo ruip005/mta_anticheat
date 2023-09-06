@@ -105,6 +105,8 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 - **Anti Max Speed**: Esta funcionalidade detecta se o jogador está andando a uma velocidade absurda.
 
 - **Screenshare**: Esta funcionalidade puxa um jogador para telar a sua tela. (Créditos ao *zJoaoFtw_*, pois foi ele que fez.)
+
+- **Element Data**: Esta funcionalidade detecta modificaçóes que dão deveriam ocorrer nos element data dos jogadores.
   
 ## Aviso Legal
 
