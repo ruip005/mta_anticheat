@@ -106,7 +106,7 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 
 - **Screenshare**: Esta funcionalidade puxa um jogador para telar a sua tela. (Créditos ao *zJoaoFtw_*, pois foi ele que fez.)
 
-- **Element Data**: Esta funcionalidade detecta modificaçóes que dão deveriam ocorrer nos element data dos jogadores.
+- **Element Data**: Esta funcionalidade detecta modificaçóes que não deveriam ocorrer nos element data dos jogadores.
   
 ## Aviso Legal
 
