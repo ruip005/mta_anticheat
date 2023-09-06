@@ -104,6 +104,8 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 
 - **Anti Max Speed**: Esta funcionalidade detecta se o jogador está andando a uma velocidade absurda.
 
+- **Screenshare**: Esta funcionalidade puxa um jogador para telar a sua tela. (Créditos ao *zJoaoFtw_*, pois foi ele que fez.)
+  
 ## Aviso Legal
 
 Este projeto é desenvolvido de forma independente e não tem afiliação oficial com os desenvolvedores do Multi Theft Auto ou da série Grand Theft Auto. O uso deste anticheat é opcional e baseado na escolha dos administradores do servidor MTA.
