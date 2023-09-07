@@ -33,10 +33,6 @@ Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório
 
 **key**: `656f0a57cb751e8f55779b991ba4ea016e870b68f2d86271dfe0701bfe70f300`
 
-4.
-**user**: `trial04`
-
-**key**: `c7b3c6f54b54ee10e915b0260bb82efbeb5aa5822b4c820526677f0123a779c2`
  
 ## Visão Geral
 
