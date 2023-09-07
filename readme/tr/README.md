@@ -4,6 +4,11 @@ Multi Theft Auto (MTA) için Hile Engelleme Sistemi projesine hoş geldiniz. Bu 
 
 [Video Nasıl Kurulur + AntiVPN](https://youtu.be/XuNNihYl7KE)
 
+# DUYURU
+Türkiye'deki engellemeler nedeniyle bazı bağlantılar reddediliyor, bir VPN kullanın ve anticheat ile test edin
+anticheat veritabanına ve harici koda bağlantı bir Türk sunucusunda test edildi ve bağlantı kurulamadı.
+Bu yüzden **VPN KULLANIN**
+
 ## Kimlik Doğrulama
 
 ### Hile engelleme sistemini başlatmak için kimlik doğrulama.
