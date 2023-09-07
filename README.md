@@ -107,6 +107,10 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 - **Screenshare**: Esta funcionalidade puxa um jogador para telar a sua tela. (Créditos ao *zJoaoFtw_*, pois foi ele que fez.)
 
 - **Element Data**: Esta funcionalidade detecta modificaçóes que não deveriam ocorrer nos element data dos jogadores.
+
+- **Lua executor**: Esta funcionalidade detecta qualquer injeção de código LUA no lado do cliente.
+
+- **CMD Blacklist/Block**: Esta funcionalidade pune o jogador que executar um comando blacklist.
   
 ## Aviso Legal
 
