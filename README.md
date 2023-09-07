@@ -6,6 +6,15 @@ Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório
 
 [Video de como configurar + AntiVPN](https://youtu.be/XuNNihYl7KE)
 
+## Escolha o seu idioma
+Tenha em mente que apenas o português é estável e completo, outros idiomas apresentarão bugs graves por não serem finalizados, aguarde uma versão estável ou use APENAS em português.  
+  
+ * [Português](https://github.com/ruip005/mta_anticheat/blob/main/readme/pt/README.md)   
+ * [Español](https://github.com/ruip005/mta_anticheat/blob/main/readme/es/README.md)  
+ * [English](https://github.com/ruip005/mta_anticheat/blob/main/readme/en/README.md)
+ * [Türkçe](https://github.com/ruip005/mta_anticheat/blob/main/readme/tr/README.md)  
+ * [Deutsch](https://github.com/ruip005/mta_anticheat/blob/main/readme/de/README.md) 
+
 ## Auth
 
 ### Autenticação para iniciar o anticheat.
