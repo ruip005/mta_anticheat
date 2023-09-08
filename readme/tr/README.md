@@ -9,6 +9,8 @@ Türkiye'deki engellemeler nedeniyle bazı bağlantılar reddediliyor, bir VPN k
 anticheat veritabanına ve harici koda bağlantı bir Türk sunucusunda test edildi ve bağlantı kurulamadı.
 Bu yüzden **VPN KULLANIN**
 
+[Türkçe sunucu için anticheat indir](https://github.com/ruip005/mta_anticheat/releases/tag/v1.3.1.01T)
+
 ## Kimlik Doğrulama
 
 ### Hile engelleme sistemini başlatmak için kimlik doğrulama.
