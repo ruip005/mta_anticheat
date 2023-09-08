@@ -1,17 +1,31 @@
+![uW33D Anticheat.](https://cdn.discordapp.com/attachments/1110700176361918545/1137505212903456808/AC.png "Anticheat")
+
 # **Anticheat für MTA (Multi Theft Auto)**
 
-Willkommen beim Anticheat-Projekt für Multi Theft Auto (MTA). Dieses Repository dient der Entwicklung eines Anticheat-Systems, das darauf abzielt, die Integrität und Fairness des Spiels in der Mehrspielerumgebung von MTA zu verbessern.
+Willkommen beim Anticheat-Projekt für Multi Theft Auto (MTA). Dieses Repository dient der Entwicklung eines Anticheat-Systems zur Verbesserung der Integrität und Fairness des Spiels in der Mehrspielerumgebung von MTA.
 
-[Video zur Einrichtung + AntiVPN](https://youtu.be/XuNNihYl7KE)
+[Video zur Konfiguration + AntiVPN](https://youtu.be/XuNNihYl7KE)
+
+[Alle Anticheat-Versionen](https://github.com/ruip005/mta_anticheat/releases)
+
+## Wählen Sie Ihre Sprache
+Bitte beachten Sie, dass nur Portugiesisch stabil und vollständig ist. Andere Sprachen können schwerwiegende Fehler aufweisen, da sie nicht abgeschlossen sind. Bitte warten Sie auf eine stabile Version oder verwenden Sie nur die portugiesische Version.
+
+ * [Portugiesisch](https://github.com/ruip005/mta_anticheat/blob/main/readme/pt/README.md)   
+ * [Spanisch](https://github.com/ruip005/mta_anticheat/blob/main/readme/es/README.md)  
+ * [Englisch](https://github.com/ruip005/mta_anticheat/blob/main/readme/en/README.md)
+ * [Türkisch](https://github.com/ruip005/mta_anticheat/blob/main/readme/tr/README.md)  
+ * [Deutsch](https://github.com/ruip005/mta_anticheat/blob/main/readme/de/README.md) 
 
 ## Authentifizierung
 
 ### Authentifizierung, um das Anticheat zu starten.
 
-| Variable | Typ      | Beschreibung                           |
-| :------- | :------- | :------------------------------------ |
-| `user`   | `string` | **Erforderlich**. Benutzername        |
-| `key`    | `string` | **Erforderlich**. Benutzeraktivierungsschlüssel |
+| Variable   | Typ       | Beschreibung                           |
+| :---------- | :--------- | :---------------------------------- |
+| `user` | `string` | **Erforderlich**. Benutzername |
+| `key` | `string` | **Erforderlich**. Benutzeraktivierungsschlüssel |
+
 
 ### Einige kostenlose Authentifizierungen.
 
@@ -30,92 +44,93 @@ Willkommen beim Anticheat-Projekt für Multi Theft Auto (MTA). Dieses Repository
 
 **Schlüssel**: `656f0a57cb751e8f55779b991ba4ea016e870b68f2d86271dfe0701bfe70f300`
 
+*Wenn Ihr Schlüssel privat ist, geben Sie ihn niemandem preis und verwenden Sie ihn nur auf Ihrem Server! Unser System erkennt die Original-IP und den Port des Servers, auf dem das Anticheat gestartet wird!*  
+
+ 
 ## Überblick
 
-Das Ziel dieses Projekts ist es, ein effizientes und robustes Anticheat für Multi Theft Auto zu erstellen. Das Anticheat soll Cheats, Hacks und andere betrügerische Aktivitäten erkennen und verhindern, die die Spielererfahrung negativ beeinflussen könnten.
+Ziel dieses Projekts ist es, ein effizientes und robustes Anticheat für Multi Theft Auto zu erstellen. Das Anticheat soll Cheats, Hacks und andere betrügerische Aktivitäten erkennen und verhindern, die die Spielerfahrung negativ beeinflussen könnten.
 
 ## Funktionen
 
-- **Screenshot**: Nehmen Sie einen Screenshot des Bildschirms des verdächtigen Spielers auf und zeigen Sie ihn auf dem Bildschirm des Personals an. Speichern Sie ihn in einem Ordner im Anticheat-Mod.
+- **Screenshot**: Aufnahme eines Screenshots des Bildschirms des verdächtigen Spielers und Anzeige auf dem Bildschirm des Personals sowie Speicherung in einem Ordner im Anticheat-Mod.
 
-- **Discord-Webhook**: Dieses Anticheat enthält auch Logs, die über Webhooks an Discord-Kanäle gesendet werden.
+- **Discord Webhook**: Dieses Anticheat verfügt auch über Protokolle, die über Webhooks an Discord-Räume gesendet werden.
 
-- **Kein Anti-Screenshot**: Wenn aktiviert, erlaubt diese Funktion nur das Betreten des Servers, wenn die Option "Bildschirmaufnahmen erlauben" aktiviert ist.
+- **Kein AntiScreenShot**: Diese Funktion ermöglicht es dem Spieler nur auf dem Server zu spielen, wenn die Option "Screenshot senden erlauben" aktiviert ist.
 
-- **Binds**: Diese Funktion benachrichtigt das Personal, wenn Tasten gedrückt werden, die normalerweise zum Öffnen von Cheats verwendet werden.
+- **Binds**: Diese Funktion benachrichtigt das Personal, wenn Tasten, die normalerweise für das Öffnen von Cheats verwendet werden, gedrückt werden.
 
 - **Anti "Backdoor"**: Diese Funktion hilft dabei, versteckte Befehle in kompilierten Mods zu entdecken.
 
 - **Pfad**: Diese Funktion hilft dabei, den Speicherort eines bestimmten Mods auf dem Server zu finden.
 
-- **Waffen-Schwarze Liste**: Diese Funktion erkennt Spieler mit nicht genehmigten Waffen auf dem Server und sperrt sie dann (außer das Personal).
+- **Waffen-Sperrliste**: Diese Funktion erkennt Spieler, die nicht erlaubte Waffen auf dem Server verwenden, und sperrt sie dann (außer dem Personal).
 
-- **Fahrzeug-Schwarze Liste**: Diese Funktion erkennt Spieler mit nicht genehmigten Fahrzeugen auf dem Server und sperrt sie dann (außer das Personal).
+- **Fahrzeug-Sperrliste**: Diese Funktion erkennt Spieler, die nicht erlaubte Fahrzeuge auf dem Server verwenden, und sperrt sie dann (außer dem Personal).
 
-- **Spielgeschwindigkeit**: Diese Funktion erkennt, ob die Spielgeschwindigkeit eines Spielers über dem Normalwert liegt.
+- **Spielgeschwindigkeit**: Diese Funktion erkennt, ob die Spieler die Spielgeschwindigkeit über dem Normalwert haben.
 
-- **Anti-Jetpack**: Diese Funktion erkennt, ob ein Spieler kein Personalmitglied ist und einen Jetpack verwendet, und sperrt ihn dann.
+- **Anti Jetpack**: Diese Funktion erkennt, ob der Spieler nicht zum Personal gehört und einen Jetpack verwendet, und sperrt ihn dann.
 
-- **Anti-Flug [BETA]**: Diese Funktion ist noch nicht zu 100% abgeschlossen, hat aber den Zweck, zu erkennen, ob ein Spieler ohne Teil des Serverpersonals zu sein fliegt.
+- **Anti Fliegen [BETA]**: Diese Funktion ist noch nicht zu 100 % abgeschlossen, hat aber die Aufgabe, zu erkennen, ob ein Spieler fliegt, ohne zum Serverpersonal zu gehören.
 
-- **RPG-Feuer**: Wenn die Funktion für die Waffenschwarze Liste nichts erkennt, wird diese RPG-Feuer-Funktion aktiviert. Sie löst ein Verbot aus, wenn ein Spieler mit einem RPG schießt.
+- **RPG-Schuss**: Wenn die Funktion Waffen-Sperrliste nicht funktioniert, wird die RPG-Schussfunktion aktiviert, die den Cheater sperrt, wenn er schießt.
 
-- **Panzer-Feuer**: Ähnlich wie die obige Funktion, aber für den Fall, dass ein Cheater aus einem Panzer schießt.
+- **Tank-Schuss**: Ähnlich wie die obige Funktion, jedoch sperrt sie den Cheater, wenn er aus einem Panzer schießt.
 
-- **VBR-Spawn**: Diese Funktion ist für diejenigen gedacht, die VBR verwenden und die Möglichkeit bieten, einen Panzer und einen Hydra zu spawnen. Sie überprüft, ob der Cheater auf der Client-Seite einen Panzer und auf der Server-Seite ein anderes Fahrzeug hat, was zu einem Verbot führt.
+- **Spawn VBR**: Diese Funktion ist für diejenigen gedacht, die VBR (Vanilla Battle Royale) verwenden und die Option zum Spawnen von Panzern und Hydras haben. Diese Funktion erkennt, ob der Cheater ein Fahrzeug auf Clientseite und ein anderes auf Serverseite hat, und sperrt ihn dann.
 
-- **Anti-Ressourcenstopp**: Diese Funktion verhindert, dass wichtige Servermods ausgeschaltet werden, wenn der Client sie deaktiviert; in solchen Fällen wird der Spieler gesperrt.
+- **Anti Ressourcenstopp**: Diese Funktion verhindert das Deaktivieren von wichtigen Mods auf dem Server, wenn der Client wichtige Mods deaktiviert, und sperrt dann den Spieler.
 
-- **Anti-Aimbot [BETA]**: Diese Funktion ist noch nicht zu 100% abgeschlossen, hat aber den Zweck, zu erkennen, ob ein Spieler sein Fadenkreuz zu schnell bewegt, als ob er wirklich einen Aimbot verwendet.
+- **Anti Aimbot [BETA]**: Diese Funktion ist noch nicht zu 100 % abgeschlossen, hat aber die Aufgabe, zu erkennen, ob ein Spieler sein Zielen zu schnell bewegt, als ob er wirklich einen Aimbot hätte.
 
-- **Personal-Serien**: Wenn diese Funktion aktiviert ist, dürfen nur Mitarbeiter mit registrierten Seriennummern eintreten.
+- **Personalseriennummern**: Diese Funktion erlaubt nur registrierten "Mitarbeitern" den Zugang, wenn die Seriennummer registriert ist.
 
-- **Personal-Wallhack**: Diese Funktion steht nur Serverpersonal zur Verfügung und hilft dabei, sich in der Nähe befindliche Spieler zu lokalisieren.
+- **Wallhack für Personal**: Diese Funktion steht nur dem Serverpersonal zur Verfügung und hilft dabei, zu sehen, wo sich die Spieler in der Nähe befinden.
 
-- **Sperrungs- und Entsper
+- **Protokolle für Verbote und Aufhebungen**: Diese
 
-rungs-Logs**: Diese Funktion sendet ein Log an Discord mit Informationen darüber, welches Mitarbeitermitglied einen Spieler gesperrt oder entsperrt hat.
+ Funktion sendet ein Protokoll an Discord mit Informationen darüber, welches Personal einem Spieler ein Verbot oder eine Aufhebung erteilt hat.
 
-- **Globaler Bann**: Diese Funktion ist exklusiv für das Anticheat und sperrt Spieler, die kürzlich beim Betreten des Servers Cheats verwendet haben, automatisch.
+- **Globaler Bann**: Diese Funktion ist exklusiv für das Anticheat und sperrt Spieler, die kürzlich betrogen haben, automatisch, wenn sie den Server betreten.
 
 - **Anti-Bann**: Diese Funktion verhindert, dass Spieler mit registrierten Seriennummern gesperrt werden.
 
-- **Update**: Das Anticheat enthält ein Update-System.
+- **Update**: Das Anticheat verfügt über ein Update-System.
 
-- **Unsichtbare Waffe [BETA]**: Diese Funktion ist noch nicht zu 100% GETESTET, hat aber den Zweck, zu erkennen, ob ein Spieler eine unsichtbare Waffe hat.
+- **Unsichtbare Waffe [BETA]**: Diese Funktion ist noch nicht zu 100 % GETESTET, hat aber die Aufgabe, zu erkennen, ob ein Spieler eine unsichtbare Waffe hat.
 
-- **Anti-Fix [BETA]**: Diese Funktion ist noch nicht zu 100% GETESTET, hat aber den Zweck, zu erkennen, ob ein Spieler eine Reparaturfunktion für ein Fahrzeug ausgeführt hat und diese abzubrechen.
+- **Anti-Fix [BETA]**: Diese Funktion ist noch nicht zu 100 % GETESTET, hat aber die Aufgabe, zu erkennen, ob ein Spieler versucht hat, ein Fahrzeug zu reparieren, und die Reparatur abzubrechen.
 
-- **Anti-Schussrate**: Diese Funktion ist noch nicht zu 100% GETESTET, hat aber den Zweck, zu erkennen, ob ein Spieler in Sekundenbruchteilen mehrere Schüsse abgefeuert hat und dann sperrt.
+- **Anti-Schussrate**: Diese Funktion ist noch nicht zu 100 % GETESTET, hat aber die Aufgabe, zu erkennen, ob ein Spieler in Sekundenbruchteilen mehrere Schüsse abgegeben hat und sie dann sperrt.
 
-- **Anti-VPN**: Diese Funktion erkennt, ob ein Spieler ein VPN verwendet, und führt dann einen Kick durch.
+- **Anti VPN**: Diese Funktion erkennt, ob ein Spieler eine VPN verwendet, und wirft ihn dann aus dem Spiel.
 
-- **Falsche Fahrzeuge**: Diese Funktion erkennt,
+- **Gefälschte Fahrzeuge**: Diese Funktion erkennt, ob ein Spieler ein Fahrzeug über ein Mod-Menü beschafft hat.
 
- ob ein Spieler ein Fahrzeug über ein Mod-Menü beschworen hat.
+- **Fahrzeug zu mir warpen**: Diese Funktion erkennt, ob ein Spieler ein existierendes Fahrzeug von sich weg geworfen hat.
 
-- **Fahrzeug zu mir teleportieren**: Diese Funktion erkennt, ob ein Spieler ein vorhandenes Fahrzeug von sich weg teleportiert hat.
+- **Screenshot-API**: Alle Screenshots werden jetzt auf einem Webserver über eine API gespeichert, sodass sie ein Discord-Protokoll mit Mediendatei senden können.
 
-- **Screenshot-API**: Alle Screenshots werden jetzt über eine API auf einem Webserver gespeichert, sodass sie zusammen mit einer Discord-Log-Datei gesendet werden können.
+- **Anti Maximalgeschwindigkeit**: Diese Funktion erkennt, ob ein Spieler mit absurd hoher Geschwindigkeit unterwegs ist.
 
-- **Anti-Maximalgeschwindigkeit**: Diese Funktion erkennt, ob ein Spieler mit einer absurden Geschwindigkeit läuft.
+- **Screenshare**: Diese Funktion zieht einen Spieler, um seinen Bildschirm zu teilen. (Credits gehen an *zJoaoFtw_*, da er dies gemacht hat.)
 
-- **Bildschirmübertragung**: Diese Funktion zwingt einen Spieler, seinen Bildschirm zu übertragen. (Dank geht an *zJoaoFtw_*, der das gemacht hat.)
+- **Elementdaten**: Diese Funktion erkennt Änderungen in den Elementdaten der Spieler, die nicht auftreten sollten.
 
-- **Elementdaten**: Diese Funktion erkennt Änderungen, die nicht in den Elementdaten der Spieler auftreten sollten.
+- **Lua-Executor**: Diese Funktion erkennt jede LUA-Code-Injektion auf der Clientseite.
 
-- **Lua-Executor**: Diese Funktion erkennt jede LUA-Code-Injektion auf der Client-Seite.
+- **CMD-Sperrliste/Block**: Diese Funktion bestraft einen Spieler, der einen gesperrten Befehl ausführt.
+  
+## Haftungsausschluss
 
-- **CMD-Blacklist/Block**: Diese Funktion bestraft Spieler, die einen Befehl aus der Blacklist ausführen.
-
-## Rechtlicher Hinweis
-
-Dieses Projekt wird unabhängig entwickelt und hat keine offizielle Verbindung zu den Entwicklern von Multi Theft Auto oder der Grand Theft Auto-Reihe. Die Verwendung dieses Anticheats ist optional und basiert auf der Entscheidung der Serveradministratoren von MTA.
+Dieses Projekt wird unabhängig entwickelt und hat keine offizielle Verbindung zu den Entwicklern von Multi Theft Auto oder der Grand Theft Auto-Serie. Die Verwendung dieses Anticheats ist optional und basiert auf der Entscheidung der Serveradministratoren von MTA.
 
 ## Kontakt
 
-Wenn Sie Fragen, Anregungen oder Problemberichte haben, zögern Sie nicht, ein Problem (Issue) in diesem Repository zu erstellen oder per E-Mail unter [ruirr31@gmail.com](mailto:ruirr31@gmail.com) Kontakt aufzunehmen.
+Wenn Sie Fragen, Vorschläge oder Problemmeldungen haben, zögern Sie nicht, ein Problem (Issue) in diesem Repository zu erstellen oder über Discord uw33d (Benutzer-ID: 297122391580999692) Kontakt aufzunehmen.
 
-## Teilen
+## Weitergabe
 
-Wenn Sie dieses Ressourcenpaket verwenden, geben Sie bitte angemessenes Guthaben, da dieses Projekt sehr aufwendig und zeitaufwendig war.
+Wenn Sie dieses Ressourcenpaket verwenden, geben Sie bitte die Credits an, da dieses Projekt sehr aufwendig und zeitaufwändig war.
