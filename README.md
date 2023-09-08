@@ -44,6 +44,8 @@ Tenha em mente que apenas o português é estável e completo, outros idiomas ap
 
 **key**: `656f0a57cb751e8f55779b991ba4ea016e870b68f2d86271dfe0701bfe70f300`
 
+*Se a sua chave/key for privada não deverá dar a ninguém, use apenas no seu servidor! O nosso sistema detecta o ip e porta original do servidor que estará iniciando o anticheat!*  
+
  
 ## Visão Geral
 
