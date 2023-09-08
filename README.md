@@ -125,7 +125,7 @@ Este projeto é desenvolvido de forma independente e não tem afiliação oficia
 
 ## Contato
 
-Se você tiver dúvidas, sugestões ou relatórios de problemas, sinta-se à vontade para criar um problema (issue) neste repositório ou entrar em contato via email em [ruirr31@gmail.com](mailto:ruirr31@gmail.com).
+Se você tiver dúvidas, sugestões ou relatórios de problemas, sinta-se à vontade para criar um problema (issue) neste repositório ou entrar em contato via discord uw33d (User ID: 297122391580999692).
 
 ## Compartilhamento
 
