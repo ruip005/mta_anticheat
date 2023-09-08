@@ -6,6 +6,17 @@ Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório
 
 [Video de como configurar + AntiVPN](https://youtu.be/XuNNihYl7KE)
 
+[Todas as versões do Anticheat](https://github.com/ruip005/mta_anticheat/releases)
+
+## Escolha o seu idioma
+Tenha em mente que apenas o português é estável e completo, outros idiomas apresentarão bugs graves por não serem finalizados, aguarde uma versão estável ou use APENAS em português.  
+  
+ * [Português](https://github.com/ruip005/mta_anticheat/blob/main/readme/pt/README.md)   
+ * [Español](https://github.com/ruip005/mta_anticheat/blob/main/readme/es/README.md)  
+ * [English](https://github.com/ruip005/mta_anticheat/blob/main/readme/en/README.md)
+ * [Türkçe](https://github.com/ruip005/mta_anticheat/blob/main/readme/tr/README.md)  
+ * [Deutsch](https://github.com/ruip005/mta_anticheat/blob/main/readme/de/README.md) 
+
 ## Auth
 
 ### Autenticação para iniciar o anticheat.
@@ -32,6 +43,8 @@ Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório
 **user**: `trial03`
 
 **key**: `656f0a57cb751e8f55779b991ba4ea016e870b68f2d86271dfe0701bfe70f300`
+
+*Se a sua chave/key for privada não deverá dar a ninguém, use apenas no seu servidor! O nosso sistema detecta o ip e porta original do servidor que estará iniciando o anticheat!*  
 
  
 ## Visão Geral
@@ -114,7 +127,7 @@ Este projeto é desenvolvido de forma independente e não tem afiliação oficia
 
 ## Contato
 
-Se você tiver dúvidas, sugestões ou relatórios de problemas, sinta-se à vontade para criar um problema (issue) neste repositório ou entrar em contato via email em [ruirr31@gmail.com](mailto:ruirr31@gmail.com).
+Se você tiver dúvidas, sugestões ou relatórios de problemas, sinta-se à vontade para criar um problema (issue) neste repositório ou entrar em contato via discord uw33d (User ID: 297122391580999692).
 
 ## Compartilhamento
 
