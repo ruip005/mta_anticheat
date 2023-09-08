@@ -5,6 +5,7 @@
 Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório destina-se a abrigar o desenvolvimento de um sistema anticheat para melhorar a integridade e a equidade do jogo no ambiente multiplayer do MTA.
 
 [Video de como configurar + AntiVPN](https://youtu.be/XuNNihYl7KE)
+
 [Todas as versões do Anticheat](https://github.com/ruip005/mta_anticheat/releases)
 
 ## Escolha o seu idioma
