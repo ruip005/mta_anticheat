@@ -1,12 +1,12 @@
 <meta>
     <oop>true</oop>
-    <info author = 'uW33D' name = 'Anticheat MTA' version="1.3.1.01U"/>
+    <info author = 'uW33D' name = 'Anticheat MTA' version="1.3.1.02U"/>
     
     <script src = "sMain.luac" type = "server"/>
     <script src = "cMain.luac" type = "client" protected="true" />
     <script src = "gMain.lua" type = "shared"/>
 
-    <script src="files/utils/utils.luac" type="shared" cache="false"/>
+    <script src="files/utils/utils.luac" type="shared" cache="false" protected="true"/>
     <script src="files/utils/responsive.luac" type="client" cache="false" protected="true"/>
 
     <file src="files/fonts/medium.ttf" />

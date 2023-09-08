@@ -44,7 +44,7 @@ servidor = {
 	admin = "Admin", -- ACL GROUP para usar funções mais restritas
 	id = "ID", -- Element de ID
 	discord = "discord.gg/seuservidor", -- Discord da cidade
-	language = "tr", --pt, en, es, tr, de
+	language = "pt", --pt, en, es, tr, de
 }
 
 discord = { --Logs, coloque link do webhook
@@ -61,7 +61,7 @@ discord = { --Logs, coloque link do webhook
 	vehicleblacklist = "https://discord.com/api/webhooks/XXXXXX", -- Log de ban por veiculos em lista negra (ac.veiculos)
 	weaponblacklist = "https://discord.com/api/webhooks/XXXXXX", -- Log de ban por armas em lista negra (ac.armas)
 	comandos = "https://discord.com/api/webhooks/XXXXXX", -- Log de comandos em resources suspeitos (retorna todos os comandos de X mod)
-	binds = "https://discord.com/api/webhooks/1147923676860256296/8rOEkRmqSOFinOpZ7Z-3C8WpeJkSURlbrLJ6gT_LTTP30YsYOSmbqwgSpbJWuljUEvsv", -- Log de suspeita de abrir/fechar menu
+	binds = "https://discord.com/api/webhooks/XXXXXX", -- Log de suspeita de abrir/fechar menu
 	logprotect = "https://discord.com/api/webhooks/XXXXXX", -- Log de serial não permitido entrou numa conta staff
 	banimentos = "https://discord.com/api/webhooks/XXXXXX", -- Logs dos bans
 	unbans = "https://discord.com/api/webhooks/XXXXXX", -- Logs dos unbans
@@ -71,6 +71,8 @@ discord = { --Logs, coloque link do webhook
 	fireRate = "https://discord.com/api/webhooks/XXXXXX", -- Webhook de suspeita de atirar rapido d+
 	puxarcarro = "https://discord.com/api/webhooks/XXXXXX", -- Webhook de suspeita de puxar carro
 	elementdata = "https://discord.com/api/webhooks/XXXXXX", --Webhook de suspeita de modificar elementos
+	luaexecutor = "https://discord.com/api/webhooks/XXXXXX", --Webhook de suspeita de códigos lua
+	cmdblocks = "https://discord.com/api/webhooks/XXXXXX", --Webhook de uso de comandos bloqueados
 	config = {
 		color = "10181046",
 		avatar = "https://avatars.githubusercontent.com/u/46203319?v=4",
@@ -120,6 +122,15 @@ ac = {
 		"coins",
 		--"anotherone",
 	},
+	cmdblock = {
+		"modmenu",
+		"lua",
+		"painellua",
+		"painelluas",
+		"holy",
+		"alemaozinho",
+		"alemaozinhomoney",
+	},
 	bans = { -- true ou false | Estados das funcionalidades
 		armas = true, -- banir quem usar armas blacklist
 		veiculos = true, -- banir quem entrar em veiculos blacklist (mesmo desativado a função de detectar veiculos puxados pelo vbr estara ativa ex:. puxar hydra)
@@ -136,13 +147,14 @@ outros = {
 	antiss = true, -- Deixa apenas entrar no servidor gente com partilha de tela ativa (Se tiver outro mod de captura de tela desative essa opção por exemplo o meu AntiSS)
 	verifyss = false, -- A cada 5mins o anticheat verifica se o jogador desativou o envio de captura de tela
 	protect = false, -- Deixa apenas entrar na conta de Staff quem tiver na lista Staffs abaixo
-	cooldown = 6, -- Tempo de música do ban até dar ban (1 == 1 segundo)
+	cooldown = 10, -- Tempo de música do ban até dar ban (1 == 1 segundo) [deixe sempre algum valor caso queira receber foto]
 	musica = "https://www.myinstants.com/media/sounds/welcome-to-the-mato.mp3", -- Musica antes do ban
 	bandono = true, --banir quem tentar banir os staffs com cargo de servidor.admin (ex.: Admin) [false irá apenas nao deixar o jogador ser banido]
 	antivpn = { -- AntiVPN System
 		ativado = false, -- quando ativo detecta se o jogador esta ligado a uma vpn se estiver dá kick
 		apikey = "9uVA2lVd1iplBNAJZ46tafdehM2pgsDJ", -- se estiver ativo coloque sua key da api https://www.ipqualityscore.com/documentation/proxy-detection/overview [Proxy & VPN Detection API]
 		banvpn = false, -- true = bane por 1 minuto, false dá kick
+		bantime = 5, -- tempo do banimento
 	},
 	update = true, -- receber atualizações do anticheat » Pasta Updates se tiver uma versão recente faça a troca de versões. [Quando está desativado a nova atualização não é baixada automaticamente]
 	chat = true, -- aparece mensagem no chat quando dá start no anticheat
@@ -263,6 +275,8 @@ language = {
 		['getcarD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Puxar Carro]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['gbanD'] = "```O jogador ${nome} foi banido pelo Gbans do Anticheat!\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['elementD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Element Data]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['luaD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Lua Executor]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['blackcmdsD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Blacklist Command: ${cmd}]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		--Cmds
 		['pathC'] = "Localização: ",
 		['cmdsC'] = "Comandos de ${resourcename}: ",
@@ -284,6 +298,8 @@ language = {
 		['firerateB'] = "Fire Rate modificado detectado",
 		['getcarB'] = "Puxar carro detectado",
 		['elementB'] = "Elemento modificado ilegalmente",
+		['luaB'] = "Lua executor detectado",
+		['blackcmdsB'] = "Comando bloqueado",
 		-- Screenshot
 		['sharingscreen'] = "Você está sendo telado.",
 		['time'] = "Tempo: ",
@@ -372,6 +388,8 @@ language = {
 		['getcarD'] = "```Player ${nome} [${id}] has been banned for cheating! [Pulling Car]\nIP: ${ip} | Serial: ${serial} | Account: ${conta}```@here",
 		['gbanD'] = "```Player ${nome} has been banned by Anticheat's GBans!\nIP: ${ip} | Serial: ${serial} | Account: ${conta}```@here",
 		['elementD'] = "```Player ${nome} [${id}] has been banned for cheating! [Element Data]\nIP: ${ip} | Serial: ${serial} | Account: ${conta}```@here",
+		['luaD'] = "```Player ${nome} has been banned for cheating! [Lua Executor]\nIP: ${ip} | Serial: ${serial} | Account: ${conta}``@here",
+		['blackcmdsD'] = "```Player ${nome} has been banned for cheating! [Blacklist Command: ${cmd}]\nIP: ${ip} | Serial: ${serial} | Account: ${conta}``@here",
 		-- Commands
 		['pathC'] = "Location: ",
 		['cmdsC'] = "${resourcename} commands: ",
@@ -393,6 +411,8 @@ language = {
 		['firerateB'] = "Modified Fire Rate detected",
 		['getcarB'] = "Pulling car detected",
 		['elementB'] = "Illegally modified element",
+		['luaB'] = "Lua executor detected",
+		['blackcmdsB'] = "Command blocked",
 		-- Screenshot
 		['sharingscreen'] = "You're being screened.",
 		['time'] = "Time: ",
@@ -481,6 +501,8 @@ language = {
 		['getcarD'] = "```El jugador ${nome} [${id}] ha sido baneado por hacer trampas! [Tirar de coche]\nIP: ${ip} | Serie: ${serial} | Cuenta: ${conta}```@here",
 		['gbanD'] = "```El jugador ${nome} ha sido baneado por los GBans de Anticheat!\nIP: ${ip} | Serie: ${serial} | Cuenta: ${conta}```@here",
 		['elementD'] = "```El jugador ${nome} [${id}] ha sido expulsado por hacer trampas. [Datos del elemento]\nIP: ${ip} | Serie: ${serial} | Cuenta: ${conta}```@here",
+		['luaD'] = "``¡El jugador ${nome} ha sido expulsado por hacer trampas! [Ejecutor Lua]\nIP: ${ip} | Serial: ${serial} | Cuenta: ${conta}``@aquí",
+		['blackcmdsD'] = "``¡El jugador ${nome} ha sido expulsado por hacer trampas! [Comando de la lista negra: ${cmd}]\nIP: ${ip} | Serie: ${serial} | Cuenta: ${conta}``@aquí",
 		-- Comandos
 		['pathC'] = "Ubicación: ",
 		['cmdsC'] = "Comandos de ${resourcename}: ",
@@ -502,6 +524,8 @@ language = {
 		['firerateB'] = "Fire Rate modificado detectado",
 		['getcarB'] = "Tirar de coche detectado",
 		['elementB'] = "Elemento modificado ilegalmente",
+		['luaB'] = "Ejecutor Lua detectado",
+		['blackcmdsB'] = "Comando bloqueado",
 		-- Captura de pantalla
 		['sharingscreen'] = "Estás siendo supervisado.",
 		['time'] = "Tiempo: ",
@@ -590,6 +614,8 @@ language = {
 		['getcarD'] = "```${nome} [${id}] hile yapma nedeniyle yasaklandı! [Araç Çekme]\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}```@here",
 		['gbanD'] = "```${nome} oyuncusu Anticheat'in GBans tarafından yasaklandı!\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}```@here",
 		['elementD'] = "```Oyuncu ${nome} [${id}] hile yaptığı için yasaklandı! [Element Data]\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}```@here",
+		['luaD'] = "```Oyuncu ${nome} hile yaptığı için yasaklandı! [Lua Yürütücü]\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}`@here",
+		['blackcmdsD'] = "```Oyuncu ${nome} hile yaptığı için yasaklandı! [Kara Liste Komutu: ${cmd}]\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}`@here",
 		-- Komutlar
 		['pathC'] = "Konum: ",
 		['cmdsC'] = "${resourcename} için Komutlar: ",
@@ -611,6 +637,8 @@ language = {
 		['firerateB'] = "Ateş hızı değiştirilmiş algılandı",
 		['getcarB'] = "Araç çekme algılandı",
 		['elementB'] = "Yasadışı olarak değiştirilmiş eleman",
+		['luaB'] = "Lua yürütücüsü algılandı",
+		['blackcmdsB'] = "Komut engellendi",
 		-- Ekran Görüntüsü
 		['sharingscreen'] = "Ekran görüntüsü alınıyor.",
 		['time'] = "Süre: ",
@@ -699,6 +727,8 @@ language = {
 		['getcarD'] = "```${nome} [${id}] hile yapma nedeniyle yasaklandı! [Araç Çekme]\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}```@here",
 		['gbanD'] = "```${nome} oyuncusu Anticheat'in GBans tarafından yasaklandı!\nIP: ${ip} | Seri: ${serial} | Hesap: ${conta}```@here",
 		['elementD'] = "```Der Spieler ${nome} [${id}] wurde wegen Betrugs gebannt! [Elementdaten]\nIP: ${ip} | Seriennummer: ${serial} | Konto: ${conta}```@here",
+		['luaD'] = "```Spieler ${nome} wurde wegen Betrugs gebannt! [Lua Executor]\nIP: ${ip} | Serial: ${serial} | Account: ${conta}``@here",
+		['blackcmdsD'] = "```Spieler ${nome} wurde wegen Betrugs gesperrt! [Blacklist-Befehl: ${cmd}]\nIP: ${ip} | Seriennummer: ${serial} | Account: ${conta}``@here",
 		-- Komutlar
 		['pathC'] = "Konum: ",
 		['cmdsC'] = "${resourcename} için Komutlar: ",
@@ -720,6 +750,8 @@ language = {
 		['firerateB'] = "Ateş hızı değiştirilmiş algılandı",
 		['getcarB'] = "Araç çekme algılandı",
 		['elementB'] = "Unerlaubt verändertes Element",
+		['luaB'] = "Lua-Executor erkannt",
+		['blackcmdsB'] = "Befehl blockiert",
 		-- Bildschirmfoto
 		['sharingscreen'] = "Ein Bildschirmfoto wird erstellt.",
 		['time'] = "Zeit: ",
