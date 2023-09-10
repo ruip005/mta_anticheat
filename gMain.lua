@@ -81,7 +81,7 @@ discord = { --Logs, coloque link do webhook
 		embed = true,
 		resolutionX = 800, --Photo resolution X --320, 640, 960, 1280 !!!! I recommend leaving resolutions low like 640 or 800
 		resolutionY = 600, --Photo resolution Y --240, 480, 480, 720	!!!! I recommend leaving resolutions low like 480 or 600
-		quality = 22, -- Photo quality -- 5, 10, 15, 20, 25, 30, 35, 40 !!!! I recommend leaving quality low like 15 or 20
+		quality = 30, -- Photo quality -- 5, 10, 15, 20, 25, 30, 35, 40 !!!! I recommend leaving quality low like 15 or 20
 		-- !!!!Se a print não enviar para o discord reduza os valores | If the print doesn't send to discord, reduce the values!!!!
 	},
 }
@@ -147,7 +147,7 @@ outros = {
 	antiss = true, -- Deixa apenas entrar no servidor gente com partilha de tela ativa (Se tiver outro mod de captura de tela desative essa opção por exemplo o meu AntiSS)
 	verifyss = false, -- A cada 5mins o anticheat verifica se o jogador desativou o envio de captura de tela
 	protect = false, -- Deixa apenas entrar na conta de Staff quem tiver na lista Staffs abaixo
-	cooldown = 10, -- Tempo de música do ban até dar ban (1 == 1 segundo) [deixe sempre algum valor caso queira receber foto]
+	cooldown = 11, -- Tempo de música do ban até dar ban (1 == 1 segundo) [deixe sempre algum valor caso queira receber foto]
 	musica = "https://www.myinstants.com/media/sounds/welcome-to-the-mato.mp3", -- Musica antes do ban
 	bandono = true, --banir quem tentar banir os staffs com cargo de servidor.admin (ex.: Admin) [false irá apenas nao deixar o jogador ser banido]
 	antivpn = { -- AntiVPN System
