@@ -8,6 +8,8 @@ Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório
 
 [Todas as versões do Anticheat](https://github.com/ruip005/mta_anticheat/releases)
 
+![Download](https://cdn.discordapp.com/attachments/818504420412620850/1150538847617302528/image.png)
+
 ## Escolha o seu idioma
 Tenha em mente que apenas o português é estável e completo, outros idiomas apresentarão bugs graves por não serem finalizados, aguarde uma versão estável ou use APENAS em português.  
   
