@@ -13,8 +13,8 @@ https://stats.uptimerobot.com/R0A6VFnrE2
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "casper",
-	key = "passwordcasper"
+	user = "", --http://request-uw33dac.duckdns.org:3000/demo
+	key = "" --http://request-uw33dac.duckdns.org:3000/demo
 }
 
 servidor = {
@@ -141,6 +141,7 @@ ac = {
 }
 
 outros = {
+	velocidademax = 700, -- Velocidade max (nao coloque muito baixa)
 	screenshareban = 0, -- Tempo de banimento se o jogador sair a meio de um ShareScreen (0 = Perma)
 	saveprints = true, -- Salvar todas as prints numa pasta no seu servidor
 	protect = false, -- Deixar apenas entrar pessoal com serial autorizado (Apenas para Staffs com acl)
