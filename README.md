@@ -1,4 +1,5 @@
 # [Anticheat - CLICK IMPORTANT!](https://github.com/ruip005/mta_anticheat/discussions/5)
+# Anticheat reformulado em fase de testes! 
 
 ![uW33D Anticheat.](https://cdn.discordapp.com/attachments/1110700176361918545/1137505212903456808/AC.png "Anticheat")
 
