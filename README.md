@@ -38,7 +38,12 @@ Tenha em mente que apenas o português é estável e completo, outros idiomas ap
 
 *Se a sua chave/key for privada não deverá dar a ninguém, use apenas no seu servidor! O nosso sistema detecta o ip e porta original do servidor que estará iniciando o anticheat!*  
 
- 
+### API Pública
+
+[Saiba mais aqui](https://github.com/ruip005/mta_anticheat/discussions/6)
+
+[Testar API](http://apis-uw33d.duckdns.org:3000/gbans/user/168)
+
 ## Visão Geral
 
 O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi Theft Auto. O anticheat visa detectar e prevenir trapaças, hacks e outras atividades fraudulentas que possam afetar negativamente a experiência de jogo dos jogadores.
