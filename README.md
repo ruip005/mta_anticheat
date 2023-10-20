@@ -106,7 +106,7 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 
 - **Warp Veh to me**: Esta funcionalidade detecta se o jogador puxou algum carro existente longe de si.
 
-- **Screenshot API**: Todas as screenshots são agora armazenadas num web server via API, podendo assim enviar uma log discord com arquivo midia.
+- **Screenshot API**: Todas as screenshots são agora armazenadas num web server via API, podendo assim enviar uma log discord com arquivo midia, 100% funcional.
 
 - **Anti Max Speed**: Esta funcionalidade detecta se o jogador está andando a uma velocidade absurda.
 
