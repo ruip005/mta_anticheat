@@ -13,8 +13,8 @@ https://stats.uptimerobot.com/R0A6VFnrE2
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "", --http://request-uw33dac.duckdns.org:3000/demo
-	key = "" --http://request-uw33dac.duckdns.org:3000/demo
+	user = "", -- https://api.uw33dac.me/demo
+	key = "" -- https://api.uw33dac.me/demo
 }
 
 servidor = {
@@ -26,35 +26,39 @@ servidor = {
 	id = "ID", -- Element Data do ID | ID Element Data
 	discord = "discord.gg/seuservidor", -- Discord do seu servidor | Ur official server discord
 	language = "pt", -- Lingua do anticheat | Anticheat Language (pt, custom)
+	anticheatmta = { -- https://wiki.multitheftauto.com/wiki/Anti-cheat_guide
+		14, 15, 28, 31, 32
+	},
+	minversion = "1.6.0-9.22268.0", -- https://nightly.multitheftauto.com/ver/
 }
 
 discord = {
 	---- Discord Webhooks
-	aimbot = "https://discord.com/api/webhooks/XXXXXX", -- Log de suspeita de aimbot | Aimbot Suspect Log
-	resourcestop = "https://discord.com/api/webhooks/XXXXXX", -- Log  ban de resource stopper | Resource Stopper Ban Log
-	spawnvbr = "https://discord.com/api/webhooks/XXXXXX", -- Log ban de vehicle spawn com vbr cheats | Vehicle Spawner with Cheat log
-	weaponkill = "https://discord.com/api/webhooks/XXXXXX", -- Log ban de matar com armas blacklist | Weapons Blacklist
-	tankammoshot = "https://discord.com/api/webhooks/XXXXXX", -- Log ban de atirar com tanque (se tiver ativado) | Tank shooting (if activated)
-	rpgvbr = "https://discord.com/api/webhooks/XXXXXX", -- Log ban de atirar com rpg que normalmente é spawn pelo vbr cheat | Shoot with rpg that is usually spawned by vbr cheat
-	fly = "https://discord.com/api/webhooks/XXXXXX", -- Log de ban de fly | Fly log
-	jetpack = "https://discord.com/api/webhooks/XXXXXX", --Log de ban de usar jetpack | Jetpack
-	speed = "https://discord.com/api/webhooks/XXXXXX", -- Log de ban por speed hack | Speed hack
-	vehicleblacklist = "https://discord.com/api/webhooks/XXXXXX", -- Log de ban por veiculos em lista negra (ac.veiculos) | Vehicles Blacklist
-	weaponblacklist = "https://discord.com/api/webhooks/XXXXXX", -- Log de ban por armas em lista negra (ac.armas) | Shooting with any weapon blacklist
-	comandos = "https://discord.com/api/webhooks/XXXXXX", -- Log de comandos em resources suspeitos (retorna todos os comandos de X mod) | commands in suspicious resources (returns all commands from X mod)
-	binds = "https://discord.com/api/webhooks/XXXXXX", -- Log de suspeita de abrir/fechar menu | Binds logs
-	logprotect = "https://discord.com/api/webhooks/XXXXXX", -- Log de serial não permitido entrou numa conta staff | Unauthorised serial log entered in a staff account
-	banimentos = "https://discord.com/api/webhooks/XXXXXX", -- Logs dos bans
-	unbans = "https://discord.com/api/webhooks/XXXXXX", -- Logs dos unbans
-	gbans = "https://discord.com/api/webhooks/XXXXXX", --Logs dos gbans aplicados | Global Bans logs
-	updatesAC = "https://discord.com/api/webhooks/XXXXXX", -- Webhook para receber novidades do anticheat | Updates anticheat
-	invisibleweapon = "https://discord.com/api/webhooks/XXXXXX", -- Webhook de suspeita de arma invisivel | Invisible Weapons
-	firerate = "https://discord.com/api/webhooks/XXXXXX", -- Webhook de suspeita de atirar rapido d+ | Fire Rate log
-	getcar = "https://discord.com/api/webhooks/XXXXXX", -- Webhook de suspeita de puxar carro | Pull Car Log
-	element = "https://discord.com/api/webhooks/XXXXXX", --Webhook de suspeita de modificar elementos | Element data modify log
-	lua = "https://discord.com/api/webhooks/XXXXXX", --Webhook de suspeita de códigos lua | Lua executor log
-	tphack = "https://discord.com/api/webhooks/XXXXXX", --Webhook de suspeita de tphack | Tphack log
-	cmdblocks = "https://discord.com/api/webhooks/XXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
+	aimbot = "https://discord.com/api/webhooks/XXXXXXX", -- Log de suspeita de aimbot | Aimbot Suspect Log
+	resourcestop = "https://discord.com/api/webhooks/XXXXXXX", -- Log  ban de resource stopper | Resource Stopper Ban Log
+	spawnvbr = "https://discord.com/api/webhooks/XXXXXXX", -- Log ban de vehicle spawn com vbr cheats | Vehicle Spawner with Cheat log
+	weaponkill = "https://discord.com/api/webhooks/XXXXXXX", -- Log ban de matar com armas blacklist | Weapons Blacklist
+	tankammoshot = "https://discord.com/api/webhooks/XXXXXXX", -- Log ban de atirar com tanque (se tiver ativado) | Tank shooting (if activated)
+	rpgvbr = "https://discord.com/api/webhooks/XXXXXXX", -- Log ban de atirar com rpg que normalmente é spawn pelo vbr cheat | Shoot with rpg that is usually spawned by vbr cheat
+	fly = "https://discord.com/api/webhooks/XXXXXXX", -- Log de ban de fly | Fly log
+	jetpack = "https://discord.com/api/webhooks/XXXXXXX", --Log de ban de usar jetpack | Jetpack
+	speed = "https://discord.com/api/webhooks/XXXXXXX", -- Log de ban por speed hack | Speed hack
+	vehicleblacklist = "https://discord.com/api/webhooks/XXXXXXX", -- Log de ban por veiculos em lista negra (ac.veiculos) | Vehicles Blacklist
+	weaponblacklist = "https://discord.com/api/webhooks/XXXXXXX", -- Log de ban por armas em lista negra (ac.armas) | Shooting with any weapon blacklist
+	comandos = "https://discord.com/api/webhooks/XXXXXXX", -- Log de comandos em resources suspeitos (retorna todos os comandos de X mod) | commands in suspicious resources (returns all commands from X mod)
+	binds = "https://discord.com/api/webhooks/XXXXXXX", -- Log de suspeita de abrir/fechar menu | Binds logs
+	logprotect = "https://discord.com/api/webhooks/XXXXXXX", -- Log de serial não permitido entrou numa conta staff | Unauthorised serial log entered in a staff account
+	banimentos = "https://discord.com/api/webhooks/XXXXXXX", -- Logs dos bans
+	unbans = "https://discord.com/api/webhooks/XXXXXXX", -- Logs dos unbans
+	gbans = "https://discord.com/api/webhooks/XXXXXXX", --Logs dos gbans aplicados | Global Bans logs
+	updatesAC = "https://discord.com/api/webhooks/XXXXXXX", -- Webhook para receber novidades do anticheat | Updates anticheat
+	invisibleweapon = "https://discord.com/api/webhooks/XXXXXXX", -- Webhook de suspeita de arma invisivel | Invisible Weapons
+	firerate = "https://discord.com/api/webhooks/XXXXXXX", -- Webhook de suspeita de atirar rapido d+ | Fire Rate log
+	getcar = "https://discord.com/api/webhooks/XXXXXXX", -- Webhook de suspeita de puxar carro | Pull Car Log
+	element = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de modificar elementos | Element data modify log
+	lua = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de códigos lua | Lua executor log
+	tphack = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de tphack | Tphack log
+	cmdblocks = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
 	---- Discord Webhooks
 	config = {
 		color = "10181046", -- Cor da embed (se ativado) Embed color (if enabled)
@@ -77,14 +81,14 @@ ac = {
 		{38, true, "Minigun"},
 	},
 	veiculos = { -- Veiculos blacklist https://wiki.multitheftauto.com/wiki/Vehicle_IDs
-    [592] = true,
-    [577] = true,
-    [432] = true,
-    [425] = true,
+    		[592] = true,
+    		[577] = true,
+    		[432] = true,
+    		[425] = true,
 	},
 	wall = { -- Sistema de wall de staff
 		distancia = 350, -- Distancia Maxima
-		soid = false, -- Aparecer apenas o ID
+		--soid = false, -- Aparecer apenas o ID
 	},
 	binds = { -- Binds supervisionadas https://wiki.multitheftauto.com/wiki/Key_names
 		{"insert", true},
@@ -160,6 +164,7 @@ ac = {
 }
 
 outros = {
+	velocidademax = 800, -- Velocidade max (nao deixe muito baixo)
 	screenshareban = 0, -- Tempo de banimento se o jogador sair a meio de um ShareScreen (0 = Perma)
 	saveprints = true, -- Salvar todas as prints numa pasta no seu servidor
 	protect = false, -- Deixar apenas entrar pessoal com serial autorizado (Apenas para Staffs com acl)
@@ -167,14 +172,14 @@ outros = {
 	update = true, -- Baixar automaticamente novas versões do anticheat
 	startchat = true, -- Aparecer mensagem de ativação do AC
 	cooldown = 5, -- Tempo de espera antes do banimento
-	musica = "https://mediastream.com/music.mp3", -- Tocar música quando o jogador estiver para ser banido
+	musica = "https://www.myinstants.com/media/sounds/cr7-vou-ao-u-ao-messi.mp3", -- Tocar música quando o jogador estiver para ser banido
 	antiss = true, -- Entrar no servidor apenas com captura de tela ativa
 	verifyAllTimeSS = false, -- Ficar analisando jogadores se ainda tem captura de tela ativa
 	telastaff = true, -- Mostrar a print do jogador na tela do Staff
 	gbans = true, -- Deixar os banimentos globais ativos
 	gbansrealcheck = false, -- Verificar o jogador que entrou no servidor se possui banimento global em tempo real (false ao iniciar o anticheat ele guarda os banimentos numa local db)
 	antivpn = {
-		on = true, -- Deixar o sistema ativo
+		on = false, -- Deixar o sistema ativo
 		api = "API-SECRET-KEY", -- Chave de API -> https://www.ipqualityscore.com/documentation/proxy-detection-api/overview
 		applyBan = false, -- Banir quem usar VPN por X minutos (API)
 		bantime = 5, -- Tempo do banimento se estiver ativo
@@ -422,7 +427,7 @@ language = {
 }
 
 notify = function(player, message, type) -- Função exportada da sua Info
-    exports["vrp_info"]:addBox(player, message, type)
+    exports["bml_info"]:addBox(player, message, type)
 end
 
 getSystemLanguage = function(index) -- Não altere!

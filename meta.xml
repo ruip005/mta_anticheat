@@ -1,10 +1,10 @@
 <meta>
     <oop>true</oop>
-    <info author = 'uW33D' name = 'Anticheat MTA' version="2.0.0.20U"/>
+    <info author = 'uW33D' name = 'Anticheat MTA' version="2.0.1.00S"/>
     
     <script src = "sMain.luac" type = "server"/>
-    <script src = "gMain.lua" type = "shared"/>
-    <script src = "cMain.luac" type = "client" protected="true" />
+    <script src = "gMain.lua" type = "shared" cache="false"/>
+    <script src = "cMain.luac" type = "client" protected="true" cache="false"/>
 
     <script src="files/utils/utils.luac" type="shared" cache="false" protected="true"/>
     <script src="files/utils/responsive.luac" type="client" cache="false" protected="true"/>
@@ -25,8 +25,6 @@
     <aclrequest>
         <right name="function.startResource" access="true" />
         <right name="function.stopResource" access="true" />
-        <right name="function.fetchRemote" access="true" />
-        <!--acl name="Admin" /-->
         <acl name="Admin" />
     </aclrequest>
     
