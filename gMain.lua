@@ -59,6 +59,8 @@ discord = {
 	lua = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de códigos lua | Lua executor log
 	tphack = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de tphack | Tphack log
 	cmdblocks = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
+	--blockcheat = "https://discord.com/api/webhooks/1178469109453815939/-8dTNroN6o8YF7LcnmtlmnlyzGlJiWWXEF8NnwHSRdOZ610yjaynA_RyFTJ-CIXUoXBm", -- Webhook atividades suspeitas
+
 	---- Discord Webhooks
 	config = {
 		color = "10181046", -- Cor da embed (se ativado) Embed color (if enabled)
@@ -88,7 +90,6 @@ ac = {
 	},
 	wall = { -- Sistema de wall de staff
 		distancia = 350, -- Distancia Maxima
-		--soid = false, -- Aparecer apenas o ID
 	},
 	binds = { -- Binds supervisionadas https://wiki.multitheftauto.com/wiki/Key_names
 		{"insert", true},
@@ -174,13 +175,12 @@ outros = {
 	cooldown = 5, -- Tempo de espera antes do banimento
 	musica = "https://www.myinstants.com/media/sounds/cr7-vou-ao-u-ao-messi.mp3", -- Tocar música quando o jogador estiver para ser banido
 	antiss = true, -- Entrar no servidor apenas com captura de tela ativa
-	verifyAllTimeSS = false, -- Ficar analisando jogadores se ainda tem captura de tela ativa
 	telastaff = true, -- Mostrar a print do jogador na tela do Staff
 	gbans = true, -- Deixar os banimentos globais ativos
 	gbansrealcheck = false, -- Verificar o jogador que entrou no servidor se possui banimento global em tempo real (false ao iniciar o anticheat ele guarda os banimentos numa local db)
 	antivpn = {
 		on = false, -- Deixar o sistema ativo
-		api = "API-SECRET-KEY", -- Chave de API -> https://www.ipqualityscore.com/documentation/proxy-detection-api/overview
+		api = "SUA CHAVE", -- Chave de API -> https://www.ipqualityscore.com/documentation/proxy-detection-api/overview | https://www.youtube.com/watch?v=XuNNihYl7KE
 		applyBan = false, -- Banir quem usar VPN por X minutos (API)
 		bantime = 5, -- Tempo do banimento se estiver ativo
 		banvpn = true -- Banir quem usar VPN por X minutos (LocalDB)
