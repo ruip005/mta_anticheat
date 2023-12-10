@@ -13,8 +13,8 @@ https://stats.uptimerobot.com/R0A6VFnrE2
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "", -- https://api.uw33dac.me/demo
-	key = "" -- https://api.uw33dac.me/demo
+	user = "ruip005", -- https://api.uw33dac.me/demo
+	key = "localhost2003" -- https://api.uw33dac.me/demo
 }
 
 servidor = {
@@ -60,6 +60,7 @@ discord = {
 	tphack = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de tphack | Tphack log
 	cmdblocks = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
 	--blockcheat = "https://discord.com/api/webhooks/1178469109453815939/-8dTNroN6o8YF7LcnmtlmnlyzGlJiWWXEF8NnwHSRdOZ610yjaynA_RyFTJ-CIXUoXBm", -- Webhook atividades suspeitas
+	explosion = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de criar explosoes | Commands explosions logs
 
 	---- Discord Webhooks
 	config = {
@@ -114,6 +115,25 @@ ac = {
 		"bank_account",
 		"weed_anticheat", -- Nome atual da pasta do anticheat
 	},
+	explosion = { -- Mesmo se o jogador estiver jogando legit isso irá banir ele se lançar uma granada (id 0) ou um disparo de tanque (id 10)
+		{0, true},
+		{10, true},
+		--[[
+	0: Grenade
+	1: Molotov
+	2: Rocket
+	3: Rocket Weak
+	4: Car
+	5: Car Quick
+	6: Boat
+	7: Heli
+	8: Mine
+	9: Object
+	10: Tank Grenade
+	11: Small
+	12: Tiny
+		--]]
+	},
 	modules = { -- Funcionalidades
 		weaponblacklist = true,
 		vehicleblacklist = true,
@@ -129,9 +149,10 @@ ac = {
 		invisibleweapon = false,
 		firerate = true,
 		getcar = false,
-		element = true,
+		element = false, -- Caso seu servidor use element data desative ou configure os elementdata sensiveis!
 		lua = true,
 		tphack = true,
+		explosion = true,
 	},
 	bans = { -- Ativar banimentos das funções
 		weaponblacklist = true,
@@ -147,9 +168,10 @@ ac = {
 		invisibleweapon = false,
 		firerate = true,
 		getcar = false,
-		element = true,
+		element = false, -- Caso seu servidor use element data desative ou configure os elementdata sensiveis!
 		lua = true,
 		tphack = true,
+		explosion = true,
 	},
 	getcar = {
 		vips = { -- ACL Vips
@@ -228,7 +250,7 @@ language = {
 		--Others
 		['screenoffkick'] = "Ative a opção de permitir o envio de capturas de tela",
 		['screenoffban'] = "Ative a opção de permitir o envio de capturas de tela",
-		['screenof'] = "Tela de:",
+		['screenof'] = "Ative o envio de tela",
 		['thinkcheater'] = "${nome} [${id}] está provavelmente usando cheats!",
 		['noinfo'] = "Sem informações",
 		['antibanwarn'] = "Você não pode banir esse jogador",
@@ -275,8 +297,9 @@ language = {
 		['gbanD'] = "```O jogador ${nome} foi banido pelo Gbans do Anticheat!\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['elementD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Element Data]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['luaD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Lua Executor]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['~tphackD'] = "```O jogador ${nome} foi banido por uso de trapaças! [TP HACK]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['tphackD'] = "```O jogador ${nome} foi banido por uso de trapaças! [TP HACK]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['blackcmdsD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Blacklist Command: ${cmd}]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['explosionD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Explosion]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		--Cmds
 		['pathC'] = "Localização: ",
 		['cmdsC'] = "Comandos de ${resourcename}: ",
@@ -301,6 +324,7 @@ language = {
 		['luaB'] = "Lua executor detectado",
 		['blackcmdsB'] = "Comando bloqueado",
 		['tphackB'] = "Teleport Hack detectado",
+		['explosionB'] = "Explosão detectada",
 		-- Screenshot
 		['sharingscreen'] = "Você está sendo telado.",
 		['time'] = "Tempo: ",
@@ -312,117 +336,7 @@ language = {
 		['banmsgss'] = "Desconectou durante a screenshare!",
 	},
 	['custom'] = { -- Sua linguagem personalizada | Your personalised language ( !Por favor não apague os ${} )
-		--Admin
-		['misspermission'] = "O anticheat não tem permissão para iniciar",
-		['search'] = "Procurando...",
-		['notallowed'] = "Este resource não está autorizado para este servidor/usuário.",
-		['expired'] = "A sua key do Anticheat [${r}] expirou ou não é mais válida, contate uW33D#3333 no discord!",
-		['errorcodeonline'] = "Erro ao executar o código: ",
-		['errordownloadcode'] = "Não foi possível baixar o código online.",
-		['requesterror'] = "Contacte uW33D#3333 Erro ao fazer a requisição: ",
-		['errorapiupdate'] = "Anticheat: Não é possível obter 'api.github.com' para novas versões!",
-		['newversionalreadydown'] = "Nova versão disponível no Github! Já está descarregado no diretório 'Updates' dentro do anticheat, basta substituir o antigo!",
-		['errorupdatingnewv'] = "Não é possível descarregar a versão mais recente do Github!",
-		['apiinvalid'] = "Chave API inválida",
-		['apierrorinternal'] = "Erro interno API",
-		['apilackdata'] = "Falta introduzir alguns dados",
-		['apiidk'] = "Erro desconhecido de API",
-		--Resources
-		['startchat'] = "#ffffffAntiCheat v ${arg} ligado (criado por uW33D#3333)",
-		['startnotify'] = "AntiCheat v ${arg} ligado (criado por uW33D#3333)",
-		['rootchatbans'] = "#ffffffO jogador "..servidor.cor.."${nome} [${id}] #fffffffoi banido por uso de trapaças!",
-		['notifythinkcheater'] = "O anticheat baniu um possível cheater",
-		['nostaffmode'] = "Você não está no modo staff!",
-		['staffwall'] = "Você ativou o wall!",
-		['gbanchat'] = "#ffffffO jogador "..servidor.cor.."${getname} [${id}] #fffffffoi banido pelo Gbans do Anticheat!",
-		['gbannotify'] = "O jogador ${nome} [${id}] foi banido pelo GBANS",
-		['vpnapi'] = "Foi detectada a entrada no servidor com VPN.",
-		['vpnsql'] = "Seu endereço IP não está permitido para conectar no servidor devido ao uso de VPN.",
-		--Others
-		['screenoffkick'] = "Ative a opção de permitir o envio de capturas de tela",
-		['screenoffban'] = "Ative a opção de permitir o envio de capturas de tela",
-		['screenof'] = "Tela de:",
-		['thinkcheater'] = "${nome} [${id}] está provavelmente usando cheats!",
-		['noinfo'] = "Sem informações",
-		['antibanwarn'] = "Você não pode banir esse jogador",
-		['syntaxaci'] = "Use /aci [ID]",
-		['playeroff'] = "Esse jogador não está online",
-		['playeralreadyignore'] = "Esse jogador já se encontra na lista de jogadores ignorados",
-		['playeraddedtoaci'] = "O jogador foi adicionado à lista de jogadores ignorados",
-		['acistaff'] = "O staff ${getname} adicionou o ID: ${id} aos jogadores ignorados!", 
-		['nopermission'] = "Você não possui permissão para executar esse comando!",
-		['verifyinfos'] = "Verificando informações...",
-		['allbansrevoke'] = "Todos os banimentos foram retirados!",
-		['nobanstorevoke'] = "Nenhum banimento registrado!",
-		['playerusingvpn'] = "O jogador ${getname} está usando VPN.", 
-		['ipaddedtojoin'] = "O IP: ${id} foi adicionado ao banco de dados.", 
-		['ipnotvalid'] = "Esse IP não é válido",
-		['ipsyntax'] = "Use /acip XXX.XXX.XXX.XXX (IP)",
-		['successScreenshot'] = "Foto tirada, aguarde...",
-		--Folders
-		['suspects'] = "Suspeitos",
-		['bans'] = "Banimentos",
-		['updates'] = "Updates",
-		--Discord
-		['bindsD'] = "O jogador ${nome} [${id}] pressionou teclas de possivel mod menu! [".."Binds".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```",
-		['pathD'] = "```Request feito por: ${getname} [${getelementid}]\n${resourcename} encontra-se na pasta: ${resourcepath}```",
-		['cmdsD'] = "```Request feito por: ${getname} [${getelementid}]\n".."Comandos de ${resourcename}```", 
-		['weaponblacklistD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [${arma}]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here", 
-		['vehicleblacklistD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".."Blacklist Vehicle".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here", 
-		['speedD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Limitador de velocidade]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here", 
-		['jetpackD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".." Jetpack hack ".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here", 
-		['flyD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".." Fly hack ".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here", 
-		['rpgvbrD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".."RPG Mod Menu".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['tankammoshotD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".."Tank Mod Menu".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['weaponkillD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".."matar com arma blacklist".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['spawnvbrD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [".."Vehicle blacklist client".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['resourcestopD'] = "```O jogador ${nome} [${id}] foi kickado! [".."Resource Stopper".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['aimbotD'] = "```O jogador ${nome} [${id}] está mexendo a mira rápido demais! [".."Aimbot".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```",
-		['joinstaffaccD'] = "```Tem alguém querendo autenticar-se na conta do Staff: ${getaccPacc} | Nick: ${getname} | IP: ${ip} | SERIAL: ${serial}```",
-		['banlogsD'] = "```O Staff ${snome} [${sid}] baniu o jogador ${nome} [${id}]\nIP: ${ip} | Serial: ${serial}```", 
-		['unbanlogsD'] = "```O Staff ${snome} [${sid}] desbaniu o IP: ${ip} | Serial: ${serial}```",
-		['invisibleweaponD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Arma invisível]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['firerateD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Fire Rate]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['updateD'] = "```diff\n+ Nova versão do Anticheat baixada!\n+ Não esqueça de fazer a troca!\n```",
-		['getcarD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Puxar Carro]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['gbanD'] = "```O jogador ${nome} foi banido pelo Gbans do Anticheat!\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['elementD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Element Data]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['luaD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Lua Executor]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['~tphackD'] = "```O jogador ${nome} foi banido por uso de trapaças! [TP HACK]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		['blackcmdsD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Blacklist Command: ${cmd}]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
-		--Cmds
-		['pathC'] = "Localização: ",
-		['cmdsC'] = "Comandos de ${resourcename}: ",
-		--Bans
-		['weaponblacklistB'] = "Arma blacklist detectado",
-		['vehicleblacklistB'] = "Veiculo blacklist detectado",
-		['speedB'] = "Limitador de velocidade detectado",
-		['jetpackB'] = "Jetpack hack detectado",
-		['flyB'] = "Fly hack detectado",
-		['rpgvbrB'] = "RPG detectado.",
-		['tankammoshotB'] = "Tank detectado.",
-		['weaponkillB'] = "Disparo c/ arma blacklist detectada",
-		['spawnvbrB'] = "Vehicle mod menu spawn",
-		['resourcestopB'] = "Resource Stopper detectado!",
-		['joinstaffaccB'] = "Você conectou-se numa conta da staff mas seu serial não é permitido",
-		['gbanB'] = "Banimento global do Anticheat",
-		['antibanfounderB'] = "Você tentou banir alguém importante!",
-		['invisibleweaponB'] = "Arma invisível detectada",
-		['firerateB'] = "Fire Rate modificado detectado",
-		['getcarB'] = "Puxar carro detectado",
-		['elementB'] = "Elemento modificado ilegalmente",
-		['luaB'] = "Lua executor detectado",
-		['blackcmdsB'] = "Comando bloqueado",
-		['tphackB'] = "Teleport Hack detectado",
-		-- Screenshot
-		['sharingscreen'] = "Você está sendo telado.",
-		['time'] = "Tempo: ",
-		['warningnoquit'] = "Não saia do servidor, se não você irá ser banido.",
-		['leavessC'] = "Você foi retirado da screenshare!",
-		['leavessS'] = "Você retirou o jogador na screenshare com sucesso!",
-		['tpssC'] = "Você foi movido para screenshare!",
-		['tpssS'] = "Você colocou o jogador na screenshare com sucesso!",
-		['banmsgss'] = "Desconectou durante a screenshare!",
+		-- Copie, cole e edite!
 	},
 }
 
