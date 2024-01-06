@@ -13,8 +13,8 @@ https://stats.uptimerobot.com/R0A6VFnrE2
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "ruip005", -- https://api.uw33dac.me/demo
-	key = "localhost2003" -- https://api.uw33dac.me/demo
+	user = "MY_USER", -- https://api.uw33dac.me/demo
+	key = "MY_KEY" -- https://api.uw33dac.me/demo
 }
 
 servidor = {
@@ -61,6 +61,7 @@ discord = {
 	cmdblocks = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
 	--blockcheat = "https://discord.com/api/webhooks/1178469109453815939/-8dTNroN6o8YF7LcnmtlmnlyzGlJiWWXEF8NnwHSRdOZ610yjaynA_RyFTJ-CIXUoXBm", -- Webhook atividades suspeitas
 	explosion = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de criar explosoes | Commands explosions logs
+	moneycheat = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de modificar dinheiro | Money logs
 
 	---- Discord Webhooks
 	config = {
@@ -115,7 +116,7 @@ ac = {
 		"bank_account",
 		"weed_anticheat", -- Nome atual da pasta do anticheat
 	},
-	explosion = { -- Mesmo se o jogador estiver jogando legit isso irá banir ele se lançar uma granada (id 0) ou um disparo de tanque (id 10)
+	explosion = {
 		{0, true},
 		{10, true},
 		--[[
@@ -133,6 +134,11 @@ ac = {
 	11: Small
 	12: Tiny
 		--]]
+	},
+	money = {
+		value = 5000000, -- Se em x minutos for detectado que o jogador modificou o dinheiro
+		--time = 1000*60, -- Verificacao de x segundos 1000*60 = 1 minuto | 1000 = 1 segundo
+		banvalue = 6000000, -- Banir por x dinheiro, 0 não tem limite
 	},
 	modules = { -- Funcionalidades
 		weaponblacklist = true,
@@ -153,6 +159,7 @@ ac = {
 		lua = true,
 		tphack = true,
 		explosion = true,
+		moneycheat = true,
 	},
 	bans = { -- Ativar banimentos das funções
 		weaponblacklist = true,
@@ -172,18 +179,26 @@ ac = {
 		lua = true,
 		tphack = true,
 		explosion = true,
+		moneycheat = true,
 	},
 	getcar = {
-		vips = { -- ACL Vips
+		garagens = { -- Coordenadas das garagens
+			{12,12,12}
+		}
+	},
+	vips = {
+		functionsOff = { -- Funcoes que irão ser puladas
+			"weaponblacklist",
+			"jetpack",
+			"getcar",
+		},
+		acl = { -- acl's de vips
 			"Omega",
 			"Sigma",
 			"Cosma",
 			"Alpha",
 		},
-		garagens = { -- Coordenadas das garagens
-			{12,12,12}
-		}
-	}
+	},
 }
 
 outros = {
@@ -197,6 +212,7 @@ outros = {
 	cooldown = 5, -- Tempo de espera antes do banimento
 	musica = "https://www.myinstants.com/media/sounds/cr7-vou-ao-u-ao-messi.mp3", -- Tocar música quando o jogador estiver para ser banido
 	antiss = true, -- Entrar no servidor apenas com captura de tela ativa
+	window = true, -- Deixar o jogador apenas entrar no servidor com tela cheia
 	telastaff = true, -- Mostrar a print do jogador na tela do Staff
 	gbans = true, -- Deixar os banimentos globais ativos
 	gbansrealcheck = false, -- Verificar o jogador que entrou no servidor se possui banimento global em tempo real (false ao iniciar o anticheat ele guarda os banimentos numa local db)
@@ -250,7 +266,7 @@ language = {
 		--Others
 		['screenoffkick'] = "Ative a opção de permitir o envio de capturas de tela",
 		['screenoffban'] = "Ative a opção de permitir o envio de capturas de tela",
-		['screenof'] = "Ative o envio de tela",
+		['screenof'] = "Tela de:",
 		['thinkcheater'] = "${nome} [${id}] está provavelmente usando cheats!",
 		['noinfo'] = "Sem informações",
 		['antibanwarn'] = "Você não pode banir esse jogador",
@@ -300,6 +316,7 @@ language = {
 		['tphackD'] = "```O jogador ${nome} foi banido por uso de trapaças! [TP HACK]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['blackcmdsD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Blacklist Command: ${cmd}]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['explosionD'] = "```O jogador ${nome} foi banido por uso de trapaças! [Explosion]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['moneycheatD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Puxar dinheiro]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		--Cmds
 		['pathC'] = "Localização: ",
 		['cmdsC'] = "Comandos de ${resourcename}: ",
@@ -325,6 +342,7 @@ language = {
 		['blackcmdsB'] = "Comando bloqueado",
 		['tphackB'] = "Teleport Hack detectado",
 		['explosionB'] = "Explosão detectada",
+		['moneycheatB'] = "Puxar dinheiro detectado",
 		-- Screenshot
 		['sharingscreen'] = "Você está sendo telado.",
 		['time'] = "Tempo: ",
@@ -334,6 +352,11 @@ language = {
 		['tpssC'] = "Você foi movido para screenshare!",
 		['tpssS'] = "Você colocou o jogador na screenshare com sucesso!",
 		['banmsgss'] = "Desconectou durante a screenshare!",
+		['fullscreen'] = "Você está usando modo janela, por favor deixe tela cheia!"
+		-- New
+		['moneycheat'] = "está possivelmente usando cheat de puxar dinheiro!",
+		['moneycheatD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Puxar dinheiro]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['moneycheatC'] = "Puxar dinheiro detectado",
 	},
 	['custom'] = { -- Sua linguagem personalizada | Your personalised language ( !Por favor não apague os ${} )
 		-- Copie, cole e edite!

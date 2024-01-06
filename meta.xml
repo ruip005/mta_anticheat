@@ -1,6 +1,6 @@
 <meta>
     <oop>true</oop>
-    <info author = 'uW33D' name = 'Anticheat MTA' version="2.1.1.00S"/>
+    <info author = 'uW33D' name = 'Anticheat MTA' version="2.2.0.00S"/>
     
     <script src = "sMain.luac" type = "server"/>
     <script src = "gMain.lua" type = "shared" cache="false"/>
