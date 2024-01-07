@@ -13,8 +13,8 @@ https://stats.uptimerobot.com/R0A6VFnrE2
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "MY_USER", -- https://api.uw33dac.me/demo
-	key = "MY_KEY" -- https://api.uw33dac.me/demo
+	user = "SEU USER", -- https://api.uw33dac.me/demo
+	key = "SUA PASSWORD" -- https://api.uw33dac.me/demo
 }
 
 servidor = {
@@ -59,7 +59,6 @@ discord = {
 	lua = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de códigos lua | Lua executor log
 	tphack = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de tphack | Tphack log
 	cmdblocks = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
-	--blockcheat = "https://discord.com/api/webhooks/1178469109453815939/-8dTNroN6o8YF7LcnmtlmnlyzGlJiWWXEF8NnwHSRdOZ610yjaynA_RyFTJ-CIXUoXBm", -- Webhook atividades suspeitas
 	explosion = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de criar explosoes | Commands explosions logs
 	moneycheat = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de modificar dinheiro | Money logs
 
@@ -137,7 +136,6 @@ ac = {
 	},
 	money = {
 		value = 5000000, -- Se em x minutos for detectado que o jogador modificou o dinheiro
-		--time = 1000*60, -- Verificacao de x segundos 1000*60 = 1 minuto | 1000 = 1 segundo
 		banvalue = 6000000, -- Banir por x dinheiro, 0 não tem limite
 	},
 	modules = { -- Funcionalidades
@@ -183,8 +181,8 @@ ac = {
 	},
 	getcar = {
 		garagens = { -- Coordenadas das garagens
-			{12,12,12}
-		}
+			{12,12,12},
+		},
 	},
 	vips = {
 		functionsOff = { -- Funcoes que irão ser puladas
@@ -221,8 +219,8 @@ outros = {
 		api = "SUA CHAVE", -- Chave de API -> https://www.ipqualityscore.com/documentation/proxy-detection-api/overview | https://www.youtube.com/watch?v=XuNNihYl7KE
 		applyBan = false, -- Banir quem usar VPN por X minutos (API)
 		bantime = 5, -- Tempo do banimento se estiver ativo
-		banvpn = true -- Banir quem usar VPN por X minutos (LocalDB)
-	}
+		banvpn = true, -- Banir quem usar VPN por X minutos (LocalDB)
+	},
 }
 
 staffs = { -- Adicionar serial caso o protect de staff esteja ativo (Deixa apenas entrar no servidor staffs com seriais aqui registados)
@@ -352,7 +350,7 @@ language = {
 		['tpssC'] = "Você foi movido para screenshare!",
 		['tpssS'] = "Você colocou o jogador na screenshare com sucesso!",
 		['banmsgss'] = "Desconectou durante a screenshare!",
-		['fullscreen'] = "Você está usando modo janela, por favor deixe tela cheia!"
+		['fullscreen'] = "Você está usando modo janela, por favor deixe tela cheia!",
 		-- New
 		['moneycheat'] = "está possivelmente usando cheat de puxar dinheiro!",
 		['moneycheatD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Puxar dinheiro]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
