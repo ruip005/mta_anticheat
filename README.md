@@ -1,6 +1,3 @@
-# [Anticheat - CLICK IMPORTANT!](https://github.com/ruip005/mta_anticheat/discussions/5)
-# Anticheat reformulado em fase de testes! 
-
 ![uW33D Anticheat.](https://cdn.discordapp.com/attachments/1110700176361918545/1137505212903456808/AC.png "Anticheat")
 
 # **Anticheat para MTA (Multi Theft Auto)**
@@ -20,7 +17,16 @@ Tenha em mente que apenas o português é estável e completo, outros idiomas ap
  * [Español](https://github.com/ruip005/mta_anticheat/blob/main/readme/es/README.md)  
  * [English](https://github.com/ruip005/mta_anticheat/blob/main/readme/en/README.md)
  * [Türkçe](https://github.com/ruip005/mta_anticheat/blob/main/readme/tr/README.md)  
- * [Deutsch](https://github.com/ruip005/mta_anticheat/blob/main/readme/de/README.md) 
+ * [Deutsch](https://github.com/ruip005/mta_anticheat/blob/main/readme/de/README.md)
+
+## Erros & Melhorias
+
+Em caso de erros do anticheat ou proposta de melhorias ou envio de uma funcionalidade melhorada abra uma issue ou me contacte pelo discord
+
+[Abrir uma issue do github](https://github.com/ruip005/mta_anticheat/issues)
+
+[Chamar no discord](https://discord.gg/w9sbKmJBcN)
+
 
 ## Auth
 
@@ -31,10 +37,18 @@ Tenha em mente que apenas o português é estável e completo, outros idiomas ap
 | `user` | `string` | **Obrigatório**. O nome de usuário |
 | `key` | `string` | **Obrigatório**. A chave de ativação do usuário |
 
+### Peça sua chave já!
 
-### Peça sua Auth de testador beta já!.
+[Acesse esse endereço e guarde as suas credenciais!](https://api.uw33dac.me/demo)
 
-[Acesse esse endereço e guarde suas credenciais!](http://request-uw33dac.duckdns.org:3000/demo)
+### OU
+
+[Discord Server](https://discord.gg/w9sbKmJBcN)
+
+
+![Step1](https://img001.prntscr.com/file/img001/DYyelX_QShyWphIFt4yAQg.png)
+![Step2](https://img001.prntscr.com/file/img001/A_jclpnRReeqxkXGa2LlLA.png)
+![Step3](https://img001.prntscr.com/file/img001/KZNieM1mRyaraU4t4Ny2_g.png)
 
 *Se a sua chave/key for privada não deverá dar a ninguém, use apenas no seu servidor! O nosso sistema detecta o ip e porta original do servidor que estará iniciando o anticheat!*  
 
@@ -42,7 +56,7 @@ Tenha em mente que apenas o português é estável e completo, outros idiomas ap
 
 [Saiba mais aqui](https://github.com/ruip005/mta_anticheat/discussions/6)
 
-[Testar API](http://apis-uw33d.duckdns.org:3000/gbans/user/168)
+[Status do Anticheat](https://stats.uptimerobot.com/R0A6VFnrE2)
 
 ## Visão Geral
 
@@ -119,6 +133,16 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 - **CMD Blacklist/Block**: Esta funcionalidade pune o jogador que executar um comando blacklist.
 
 - **Tp Hack**: Esta funcionalidade detecta se o jogador deu teleporte.
+
+- **Anti explosions**: Esta funcionalidade detecta explosões vindas de algum jogador.
+
+- **Money system**: Detecta alta quantidade de dinheiro a ser movimentado na conta
+
+- **Window Mode**: Detecta se o jogador está em modo janela.
+
+- **Anti spoofer**: Sistema de anti spoofing, se o jogador alterar o seu serial o anticheat tentará fazer consultas para saber se o jogador está spoofando.
+
+- **Anti Countries**: Sistema que apenas deixará jogar jogadores de um certo pais.
   
 ## Aviso Legal
 
