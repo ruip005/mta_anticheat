@@ -39,7 +39,7 @@ Em caso de erros do anticheat ou proposta de melhorias ou envio de uma funcional
 
 ### Peça sua chave já!
 
-[Acesse esse endereço e guarde as suas credenciais!](https://api.uw33dac.me/demo)
+[Acesse esse endereço e guarde as suas credenciais!](https://api.uw33dac.me/v2/public/demo)
 
 ### OU
 
@@ -50,7 +50,7 @@ Em caso de erros do anticheat ou proposta de melhorias ou envio de uma funcional
 ![Step2](https://img001.prntscr.com/file/img001/A_jclpnRReeqxkXGa2LlLA.png)
 ![Step3](https://img001.prntscr.com/file/img001/KZNieM1mRyaraU4t4Ny2_g.png)
 
-[A chave acima foi desativada, peça a sua!](https://api.uw33dac.me/auth/hBG3ahd1)
+[A chave acima foi desativada, peça a sua!](https://api.uw33dac.me/v2/public/auth/hBG3ahd1)
 
 *Se a sua chave/key for privada não deverá dar a ninguém, use apenas no seu servidor! O nosso sistema detecta o ip e porta original do servidor que estará iniciando o anticheat!*  
 
