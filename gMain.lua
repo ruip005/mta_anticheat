@@ -10,11 +10,25 @@
 https://github.com/ruip005/mta_anticheat
 https://stats.uptimerobot.com/R0A6VFnrE2
 
+!!!!!WARNING!!!!!
+
+Este anticheat não é compativel com servidores VRP (que usam mysql) por exemplo servidores turcos!
+Porquê? Porque o sistema está feito para usar ACL's e não compatibilidade com funções ainda de MySQL (Por exemplo como é via mysql o adminLevel é setado por setElementData e o anticheat verifica a ACL de staff então nao consegue saber se o jogador é staff ou não)
+Futuramente irei desenvolver uma versão do anticheat adaptada para esses servidores!
+
+This anticheat is not compatible with VRP servers (which use mysql), for example Turkish servers!
+Why? Because the system is designed to use ACLs and not compatibility with MySQL functions (for example, since it's via mysql, the adminLevel is set by setElementData and anticheat checks the staff ACL so it can't know if the player is staff or not).
+In the future I will develop a version of anticheat adapted for these servers!
+
+Bu anticheat VRP sunucuları (mysql kullanan), örneğin Türk sunucuları ile uyumlu değildir!
+Neden mi? Çünkü sistem ACL'leri kullanmak için tasarlanmıştır ve MySQL fonksiyonları ile uyumlu değildir (örneğin, mysql üzerinden olduğu için, adminLevel setElementData tarafından ayarlanır ve anticheat personel ACL'sini kontrol eder, böylece oyuncunun personel olup olmadığını bilemez).
+Gelecekte anticheat'in bu sunucular için uyarlanmış bir versiyonunu geliştireceğim!
+
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "SEU USER", -- https://api.uw33dac.me/demo
-	key = "SUA PASSWORD" -- https://api.uw33dac.me/demo
+	user = "SEU USER", -- https://api.uw33dac.me/v2/public/demo
+	key = "SUA PASSWORD" -- https://api.uw33dac.me/v2/public/demo
 }
 
 servidor = {
@@ -27,7 +41,7 @@ servidor = {
 	discord = "discord.gg/seuservidor", -- Discord do seu servidor | Ur official server discord
 	language = "pt", -- Lingua do anticheat | Anticheat Language (pt, custom)
 	anticheatmta = { -- https://wiki.multitheftauto.com/wiki/Anti-cheat_guide
-		14, 15, 28, 31, 32
+		14, 15, 28, 31, 32 -- Caso der kick AC#30 coloque apenas 31 e 32 que vem padrão pelo MTA (AC#30 é do proprio anticheat do mta)
 	},
 	minversion = "1.6.0-9.22268.0", -- https://nightly.multitheftauto.com/ver/
 }
@@ -61,7 +75,7 @@ discord = {
 	cmdblocks = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de uso de comandos bloqueados | Commands blacklist log
 	explosion = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de criar explosoes | Commands explosions logs
 	moneycheat = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de suspeita de modificar dinheiro | Money logs
-
+	spoofer = "https://discord.com/api/webhooks/XXXXXXX", --Webhook de bans e suspeitos de usar spoofing | Spoofer logs
 	---- Discord Webhooks
 	config = {
 		color = "10181046", -- Cor da embed (se ativado) Embed color (if enabled)
@@ -71,7 +85,7 @@ discord = {
 		embed = true, -- Ativar discord embed | Discord embed status
 		resolutionX = 800, -- Resolução X 
 		resolutionY = 600, -- Resolução Y
-		quality = 13, -- Qualidade da imagem, não deixe muito alto 10~30 | Image quality
+		quality = 21, -- Qualidade da imagem, não deixe muito alto 10~30 | Image quality
 	},
 }
 
@@ -102,6 +116,10 @@ ac = {
 		"coins",
 	},
 	cmdblock = { -- Comandos bloqueados
+		on = true, -- Deixar sistema ligado?
+		ban = false, -- true = ban | false = kick
+		seconds = 0, -- 0 = ban permanente, 60*10 = 10 minutos 
+		cmds = { -- Comandos bloqueados
 		"modmenu",
 		"lua",
 		"painellua",
@@ -109,10 +127,11 @@ ac = {
 		"holy",
 		"alemaozinho",
 		"alemaozinhomoney",
+		},
 	},
 	resources = { -- Resources que não podem ser desligados
-		"vrp_savesystem",
-		"bank_account",
+		"vrp_savesystem", -- Seu resource 'sensivel'
+		"bank_account", -- Seu resource 'sensivel'
 		"weed_anticheat", -- Nome atual da pasta do anticheat
 	},
 	explosion = {
@@ -158,13 +177,14 @@ ac = {
 		tphack = true,
 		explosion = true,
 		moneycheat = true,
+		spoofer = true,
 	},
 	bans = { -- Ativar banimentos das funções
 		weaponblacklist = true,
 		vehicleblacklist = true,
 		speed = true,
 		jetpack = true,
-		fly = false,
+		fly = true,
 		rpgvbr = true,
 		tankammoshot = true,
 		weaponkill = true,
@@ -178,19 +198,20 @@ ac = {
 		tphack = true,
 		explosion = true,
 		moneycheat = true,
+		spoofer = true,
 	},
-	getcar = {
+	getcar = { -- Sistema que tenta detectar veiculos que foram puxados
 		garagens = { -- Coordenadas das garagens
 			{12,12,12},
 		},
 	},
 	vips = {
-		functionsOff = { -- Funcoes que irão ser puladas
+		functionsOff = { -- Funcoes que irão ser puladas se o jogador for vip
 			"weaponblacklist",
 			"jetpack",
 			"getcar",
 		},
-		acl = { -- acl's de vips
+		acl = { -- acl's de vips do seu servidor
 			"Omega",
 			"Sigma",
 			"Cosma",
@@ -210,16 +231,24 @@ outros = {
 	cooldown = 5, -- Tempo de espera antes do banimento
 	musica = "https://www.myinstants.com/media/sounds/cr7-vou-ao-u-ao-messi.mp3", -- Tocar música quando o jogador estiver para ser banido
 	antiss = true, -- Entrar no servidor apenas com captura de tela ativa
-	window = true, -- Deixar o jogador apenas entrar no servidor com tela cheia
+	window = false, -- Deixar o jogador apenas entrar no servidor com tela cheia
 	telastaff = true, -- Mostrar a print do jogador na tela do Staff
 	gbans = true, -- Deixar os banimentos globais ativos
 	gbansrealcheck = false, -- Verificar o jogador que entrou no servidor se possui banimento global em tempo real (false ao iniciar o anticheat ele guarda os banimentos numa local db)
 	antivpn = {
-		on = false, -- Deixar o sistema ativo
+		on = false, -- Deixar o sistema ativo?
 		api = "SUA CHAVE", -- Chave de API -> https://www.ipqualityscore.com/documentation/proxy-detection-api/overview | https://www.youtube.com/watch?v=XuNNihYl7KE
 		applyBan = false, -- Banir quem usar VPN por X minutos (API)
 		bantime = 5, -- Tempo do banimento se estiver ativo
 		banvpn = true, -- Banir quem usar VPN por X minutos (LocalDB)
+	},
+	country = { -- Deixar apenas logar pessoas de certos paises
+		on = false, -- Deixar sistema ativo?
+		flags = { -- Siglas dos paises
+			"PT",
+			"US",
+			"BR",
+		},
 	},
 }
 
@@ -263,7 +292,7 @@ language = {
 		['vpnsql'] = "Seu endereço IP não está permitido para conectar no servidor devido ao uso de VPN.",
 		--Others
 		['screenoffkick'] = "Ative a opção de permitir o envio de capturas de tela",
-		['screenoffban'] = "Ative a opção de permitir o envio de capturas de tela",
+		['screenoffban'] = "Ative a opção de permitir o envio de capturas de tela ou deixe tela cheia",
 		['screenof'] = "Tela de:",
 		['thinkcheater'] = "${nome} [${id}] está provavelmente usando cheats!",
 		['noinfo'] = "Sem informações",
@@ -355,14 +384,25 @@ language = {
 		['moneycheat'] = "está possivelmente usando cheat de puxar dinheiro!",
 		['moneycheatD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Puxar dinheiro]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['moneycheatC'] = "Puxar dinheiro detectado",
+		['countrynotallowed'] = "Your country is not allowed",
+		['spooferB'] = "Spoofer detectado!",
+		['spooferD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Spoofer]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['spooferDS'] = "```O jogador ${nome} [${id}] é suspeito de usar Spoofing! [Spoofer]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
+		['spooferS'] = "O jogador ${nome} é suspeito de usar spoofing."
 	},
 	['custom'] = { -- Sua linguagem personalizada | Your personalised language ( !Por favor não apague os ${} )
 		-- Copie, cole e edite!
 	},
+	['es'] = {
+		-- Su lengua
+	},
+	['ge'] = {
+		-- Meine sprache
+	},
 }
 
 notify = function(player, message, type) -- Função exportada da sua Info
-    exports["bml_info"]:addBox(player, message, type)
+    exports["bml_info"]:addBox(player, message, type) -- Coloque aqui a sua info/infobox
 end
 
 getSystemLanguage = function(index) -- Não altere!
