@@ -27,8 +27,8 @@ Gelecekte anticheat'in bu sunucular için uyarlanmış bir versiyonunu geliştir
 ]]
 
 auth = { -- Autenticação | Authentication
-	user = "SEU USER", -- https://api.uw33dac.me/v2/public/demo
-	key = "SUA PASSWORD" -- https://api.uw33dac.me/v2/public/demo
+	user = "SEU USER", -- https://api.uw33dac.me/demo
+	key = "SUA PASSWORD" -- https://api.uw33dac.me/demo
 }
 
 servidor = {
@@ -85,7 +85,7 @@ discord = {
 		embed = true, -- Ativar discord embed | Discord embed status
 		resolutionX = 800, -- Resolução X 
 		resolutionY = 600, -- Resolução Y
-		quality = 21, -- Qualidade da imagem, não deixe muito alto 10~30 | Image quality
+		quality = 13, -- Qualidade da imagem, não deixe muito alto 10~30 | Image quality
 	},
 }
 
@@ -184,7 +184,7 @@ ac = {
 		vehicleblacklist = true,
 		speed = true,
 		jetpack = true,
-		fly = true,
+		fly = false,
 		rpgvbr = true,
 		tankammoshot = true,
 		weaponkill = true,
@@ -198,7 +198,6 @@ ac = {
 		tphack = true,
 		explosion = true,
 		moneycheat = true,
-		spoofer = true,
 	},
 	getcar = { -- Sistema que tenta detectar veiculos que foram puxados
 		garagens = { -- Coordenadas das garagens
@@ -231,7 +230,7 @@ outros = {
 	cooldown = 5, -- Tempo de espera antes do banimento
 	musica = "https://www.myinstants.com/media/sounds/cr7-vou-ao-u-ao-messi.mp3", -- Tocar música quando o jogador estiver para ser banido
 	antiss = true, -- Entrar no servidor apenas com captura de tela ativa
-	window = false, -- Deixar o jogador apenas entrar no servidor com tela cheia
+	window = true, -- Deixar o jogador apenas entrar no servidor com tela cheia
 	telastaff = true, -- Mostrar a print do jogador na tela do Staff
 	gbans = true, -- Deixar os banimentos globais ativos
 	gbansrealcheck = false, -- Verificar o jogador que entrou no servidor se possui banimento global em tempo real (false ao iniciar o anticheat ele guarda os banimentos numa local db)
@@ -242,12 +241,11 @@ outros = {
 		bantime = 5, -- Tempo do banimento se estiver ativo
 		banvpn = true, -- Banir quem usar VPN por X minutos (LocalDB)
 	},
-	country = { -- Deixar apenas logar pessoas de certos paises
-		on = false, -- Deixar sistema ativo?
-		flags = { -- Siglas dos paises
+	country = {
+		on = true, -- Deixar sistema ativo?
+		flags = {
 			"PT",
 			"US",
-			"BR",
 		},
 	},
 }
@@ -331,8 +329,8 @@ language = {
 		['resourcestopD'] = "```O jogador ${nome} [${id}] foi kickado! [".."Resource Stopper".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['aimbotD'] = "```O jogador ${nome} [${id}] está mexendo a mira rápido demais! [".."Aimbot".."]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```",
 		['joinstaffaccD'] = "```Tem alguém querendo autenticar-se na conta do Staff: ${getaccPacc} | Nick: ${getname} | IP: ${ip} | SERIAL: ${serial}```",
-		['banlogsD'] = "```O Staff ${snome} [${sid}] baniu o jogador ${nome} [${id}]\nIP: ${ip} | Serial: ${serial}```", 
-		['unbanlogsD'] = "```O Staff ${snome} [${sid}] desbaniu o IP: ${ip} | Serial: ${serial}```",
+		['banlogsD'] = "```O Staff ${snome} [${sid}] baniu o jogador ${nome} [${id}]\n\nIP: ${ip} | Serial: ${serial}\nTempo: ${tempo}\nMotivo: ${motivo}\n```", 
+		['unbanlogsD'] = "```O Staff ${snome} [${sid}] desbaniu o jogador ${nome} [${id}]\n\nIP: ${ip} | Serial: ${serial}```",
 		['invisibleweaponD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Arma invisível]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['firerateD'] = "```O jogador ${nome} [${id}] foi banido por uso de trapaças! [Fire Rate]\nIP: ${ip} | Serial: ${serial} | Conta: ${conta}```@here",
 		['updateD'] = "```diff\n+ Nova versão do Anticheat baixada!\n+ Não esqueça de fazer a troca!\n```",
