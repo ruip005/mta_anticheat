@@ -145,6 +145,8 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 - **Anti spoofer**: Sistema de anti spoofing, se o jogador alterar o seu serial o anticheat tentará fazer consultas para saber se o jogador está spoofando.
 
 - **Anti Countries**: Sistema que apenas deixará jogar jogadores de um certo pais.
+
+- **Anti ESP**: Sistema tenta impedir os cheaters de usarem a funcionalidade de ESP. (Porém no spectate do staff não irá conseguir a posição real dos jogadores)
   
 ## Aviso Legal
 
