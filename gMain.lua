@@ -41,7 +41,7 @@ servidor = {
 	discord = "discord.gg/seuservidor", -- Discord do seu servidor | Ur official server discord
 	language = "pt", -- Lingua do anticheat | Anticheat Language (pt, custom)
 	anticheatmta = { -- https://wiki.multitheftauto.com/wiki/Anti-cheat_guide
-		14, 15, 28, 31, 32 -- Caso der kick AC#30 coloque apenas 31 e 32 que vem padrão pelo MTA (AC#30 é do proprio anticheat do mta)
+		31, 32 -- Caso der kick AC#30 coloque apenas 31 e 32 que vem padrão pelo MTA (AC#30 é do proprio anticheat do mta) [14, 15, 28, 31, 32]
 	},
 	minversion = "1.6.0-9.22268.0", -- https://nightly.multitheftauto.com/ver/
 }
@@ -107,9 +107,14 @@ ac = {
 		distancia = 350, -- Distancia Maxima
 	},
 	binds = { -- Binds supervisionadas https://wiki.multitheftauto.com/wiki/Key_names
-		{"insert", true},
-		{"delete", true},
-		{"end", true},
+		{"insert", true}, -- Botão INSERT|INS
+		{"delete", true}, -- Botão DELETE|DEL
+		{"end", true}, -- Botão END
+		{"F12", true}, -- Botão F12
+		{"arrow_l", true}, -- Seta para a esquerda
+		{"arrow_u", true}, -- Seta para cima
+		{"arrow_r", true}, -- Seta para a direita
+		{"arrow_d", true}, -- Seta para baixo
 	},
 	elementdata = { -- ElementsDatas que não podem ser modificados do lado do Client-Side
 		"moneycoins",
@@ -119,7 +124,7 @@ ac = {
 		on = true, -- Deixar sistema ligado?
 		ban = false, -- true = ban | false = kick
 		seconds = 0, -- 0 = ban permanente, 60*10 = 10 minutos 
-		cmds = { -- Comandos bloqueados
+		cmds = { -- Comandos executados no client-side
 		"modmenu",
 		"lua",
 		"painellua",
@@ -178,6 +183,7 @@ ac = {
 		explosion = true,
 		moneycheat = true,
 		spoofer = true,
+		antiesp = true, -- Desative se nao conseguir observar os jogadores no painel p
 	},
 	bans = { -- Ativar banimentos das funções
 		weaponblacklist = true,
@@ -229,8 +235,8 @@ outros = {
 	startchat = true, -- Aparecer mensagem de ativação do AC
 	cooldown = 5, -- Tempo de espera antes do banimento
 	musica = "https://www.myinstants.com/media/sounds/cr7-vou-ao-u-ao-messi.mp3", -- Tocar música quando o jogador estiver para ser banido
-	antiss = true, -- Entrar no servidor apenas com captura de tela ativa
-	window = true, -- Deixar o jogador apenas entrar no servidor com tela cheia
+	antiss = false, -- Entrar no servidor apenas com captura de tela ativa
+	window = false, -- Deixar o jogador apenas entrar no servidor com tela cheia
 	telastaff = true, -- Mostrar a print do jogador na tela do Staff
 	gbans = true, -- Deixar os banimentos globais ativos
 	gbansrealcheck = false, -- Verificar o jogador que entrou no servidor se possui banimento global em tempo real (false ao iniciar o anticheat ele guarda os banimentos numa local db)
@@ -242,7 +248,7 @@ outros = {
 		banvpn = true, -- Banir quem usar VPN por X minutos (LocalDB)
 	},
 	country = {
-		on = true, -- Deixar sistema ativo?
+		on = false, -- Deixar sistema ativo?
 		flags = {
 			"PT",
 			"US",
