@@ -4,6 +4,8 @@
 
 Bem-vindo ao projeto de Anticheat para Multi Theft Auto (MTA). Este repositório destina-se a abrigar o desenvolvimento de um sistema anticheat para melhorar a integridade e a equidade do jogo no ambiente multiplayer do MTA.
 
+[Video do anticheat - Arena MTA](https://www.youtube.com/watch?v=CbmHZZf4HDk)
+
 [Video de como configurar + AntiVPN](https://youtu.be/XuNNihYl7KE)
 
 [Todas as versões do Anticheat](https://github.com/ruip005/mta_anticheat/releases)
@@ -100,7 +102,7 @@ O objetivo deste projeto é criar um anticheat eficiente e robusto para o Multi 
 
 - **Staff serials**: Esta funcionalidade quando ativa apenas deixa entrar "*staffers*" com o serial registado.
 
-- **Wallhack de Staff**: Esta funcionalidade está apenas presente para os staffs do servidor que ajuda a saber onde os jogadores se encontram por perto.
+- **Wallhack de Staff**: Esta funcionalidade está apenas presente para os staffs do servidor que ajuda a saber onde os jogadores se encontram por perto. (/wallac)
 
 - **Logs de ban e unban**: Esta funcionalidade enviará um log para o discord com informações sobre qual foi o staff que deu ban ou unban a um jogador.
 
