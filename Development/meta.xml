@@ -1,0 +1,32 @@
+<meta>
+    <oop>true</oop>
+    <info author='uW33D' name='Anticheat MTA' version="2.3.0.03U" />
+
+    <script src="sMain.lua" type="server" />
+    <script src="sWebhooks.lua" type="server" />
+    <script src="gMain.lua" type="shared" cache="false" protected="true" />
+    <script src="cMain.lua" type="client" protected="true" cache="false" />
+
+    <script src="files/utils/utils.luac" type="shared" cache="false" protected="true" />
+    <script src="files/utils/responsive.luac" type="client" cache="false" protected="true" />
+
+    <file src="files/fonts/medium.ttf" />
+    <file src="files/fonts/regular.ttf" />
+    <file src="files/fonts/bold.ttf" />
+    <file src="files/fonts/light.ttf" />
+    <file src="files/fonts/black.ttf" />
+    <file src="files/fonts/semibold.ttf" />
+
+    <file src="files/imgs/base.png" />
+    <file src="files/imgs/ellipse.png" />
+
+    <min_mta_version server="1.5.7-9.20307" client="1.5.7-9.20307" />
+    <download_priority_group>2</download_priority_group>
+
+    <aclrequest>
+        <right name="function.startResource" access="true" />
+        <right name="function.stopResource" access="true" />
+        <acl name="Admin" />
+    </aclrequest>
+
+</meta>
