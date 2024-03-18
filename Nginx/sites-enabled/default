@@ -1,0 +1,25 @@
+server {
+	listen 80;
+	server_name database.uw33dac.me;
+
+	location / {
+		proxy_pass "http://127.0.0.1:8080/phpmyadmin/";
+	}
+}
+
+
+server {
+	listen 80;
+	server_name api.uw33dac.me;
+	location / {
+		proxy_pass "http://127.0.0.1:9000/";
+	}
+}
+
+server {
+        listen 80;
+        server_name images.uw33dac.me;
+        location / {
+                proxy_pass "http://127.0.0.1:9000/v2/priv8/getphoto/";
+        }
+}
