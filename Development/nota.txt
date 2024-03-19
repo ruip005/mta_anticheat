@@ -1,0 +1,3 @@
+Essa pasta é uma versão inacabada do anticheat, ainda não foi testado!
+Deixe os webhooks fora do shared!!! deixe num ficheiro de fora e que seja apenas server-side.
+Coloque também o anticheat a rodar no mesmo resource do painel p!!!
