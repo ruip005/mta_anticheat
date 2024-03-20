@@ -8,3 +8,5 @@ Olá a todos, venho falar sobre o projeto do anticheat que venho desenvolvendo e
 Portanto a partir de hoje amanhã será liberado o source code do anticheat, no tempo livre poderei melhorar um pouco ele ou se a comunidade quiser ajudar poderá fazer melhorias nele.
 
 Por favor deixe os créditos, caso queira fazer melhorias faça **FORK** e **PULL REQUEST**
+
+[Config API](https://www.youtube.com/watch?v=tgKDowNBoGE)
