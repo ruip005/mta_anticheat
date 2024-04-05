@@ -1,4 +1,4 @@
-![uW33D Anticheat.](https://cdn.discordapp.com/attachments/1110700176361918545/1137505212903456808/AC.png "Anticheat")
+![uW33D Anticheat.](https://i.imgur.com/76bFm9i.png)
 
 # **Anticheat para MTA (Multi Theft Auto)**
 
