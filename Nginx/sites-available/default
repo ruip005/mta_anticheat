@@ -1,19 +1,20 @@
-server {
-	listen 80;
-	server_name database.uw33dac.me;
 
-	location / {
-		proxy_pass "http://127.0.0.1:8080/phpmyadmin/";
-	}
+server {
+        listen 80;
+        server_name database.uw33dac.me;
+
+        location / {
+                proxy_pass "http://127.0.0.1:8080/phpmyadmin/";
+        }
 }
 
 
 server {
-	listen 80;
-	server_name api.uw33dac.me;
-	location / {
-		proxy_pass "http://127.0.0.1:9000/";
-	}
+        listen 80;
+        server_name api.uw33dac.me;
+        location / {
+                proxy_pass "http://127.0.0.1:9000/";
+        }
 }
 
 server {
@@ -25,9 +26,17 @@ server {
 }
 
 server {
-	listen 80;
-	server_name tdw.uw33dac.me;
-	location / {
-		proxy_pass "http://127.0.0.1:3939";
-	}
+        listen 80;
+        server_name tdw.uw33dac.me;
+        location / {
+                proxy_pass "http://127.0.0.1:3939";
+        }
 }
+
+server {
+        listen 80;
+        server_name auth.uw33dac.me;
+        location / {
+                proxy_pass "http://127.0.0.1:2999";
+        }
+
