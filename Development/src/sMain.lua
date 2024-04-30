@@ -942,12 +942,15 @@ end)
 
 -- Novas funcionalidades
 
-addEventHandler("onDebugMessage", getRootElement(),function(message, level, file, line)
-    local rr = file:match("(.+)\\")
-    if (level == 1 or level == 2) and rr == getResourceName(getThisResource()) then
-        errorAC(tostring(line), message)
+local function onDebugMessageHandler(message, level, file, line) -- Troquei [onDebugMessage] por [onDebugMessageHandler] para modular de forma correta com a depuração 
+    if file then -- Adicionei para veirificar se o valor de file e nil/nulo caso for ele executa caso ñ for ele ignora
+        local rr = file:match("(.+)\")
+        if (level == 1 or level == 2 or level == 3) and rr == getResourceName(getThisResource()) then -- implementei o erro level 3 para trabalhar com todos (opcional)
+            errorAC(tostring(line), message)
+        end
     end
-end)
+end
+addEventHandler("onDebugMessageHandler", getRootElement(), onDebugMessageHandler) -- Modificação feita por gw.designe
 
 
 -- Novas funcionalidades
