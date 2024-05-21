@@ -251,3 +251,11 @@ fs.readdir("./Events", (err, file) => {
     require(`./Events/${event}`);
   });
 });
+
+process.on('uncaughtException', (error, origin) => {
+  console.log(`🚫 Erro Detectado:]\n\n${error.stack}`);
+});
+
+process.on('uncaughtExceptionMonitor', (error, origin) => {
+  console.log(`🚫 Erro Detectado:\n\n${error.stack}`);
+});
