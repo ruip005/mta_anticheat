@@ -1,0 +1,11 @@
+<meta>
+    <oop>true</oop>
+    <min_mta_version client="1.5.4-9.11413" server="1.5.4-9.11413" />
+
+    <!-- SCRIPTS -->
+    <script src="cSchootz.luac" type="client" cache="false"/>
+    <script src="gSchootz.lua" type="shared" cache="false"/>
+    <script src="sSchootz.lua" type="server" cache="false"/>
+
+    <download_priority_group>9999</download_priority_group>
+</meta>

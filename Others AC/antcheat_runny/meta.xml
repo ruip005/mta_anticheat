@@ -1,0 +1,19 @@
+<meta>
+    <oop>true</oop>
+	<info author="arielszz" description="Draven-AC" type="script" version="1.3.3" />
+
+	<script src="server.lua" type= "server" cache="false" />
+    <script src="client.lua" type="client" cache="false"/>
+    <script src="config.lua" type="shared" cache="false"/>
+
+	<min_mta_version server="1.6.0-9.22623" client="1.6.0-9.22623" />
+
+	<aclrequest>
+        <right name="function.startResource" access="true" />
+        <right name="function.stopResource" access="true" />
+        <right name="function.kickPlayer" access="true" />
+        <right name="function.banPlayer" access="true" />
+        <right name="function.fetchRemote" access="true" />
+        <acl name="Admin" />
+    </aclrequest>
+</meta>
