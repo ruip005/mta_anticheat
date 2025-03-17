@@ -1,0 +1,79 @@
+<meta>
+    <info author='MarlonSCR e Sigimas' version='v1.3' name='horus_ac' description='A advanced anti cheat for mta servers' />
+    
+    <oop>true</oop>
+
+    <script src='settings.lua' type='shared' protected = 'true' cache = 'false'/>
+
+    <script type='server' src='s.settings.lua' />
+    
+    <script type='server' src='script/sources/utils/s._sync.lua' />
+
+    <script type='server' src='script/sources/utils/s.utils.lua' />
+
+    <script type='server' src='script/sources/utils/s.sendhook.lua' />
+
+    <script type='client' src='script/sources/client/c.main.lua' protected = 'true' cache = 'false' validate = 'true' />
+    
+    <script type='server' src='script/sources/server/s.functions.lua' />
+
+    <script type='server' src='script/sources/server/s.modules.lua' />
+
+    <script type='server' src='script/sources/server/s.main.lua' />
+
+    <download_priority_group>999999</download_priority_group>
+
+    <min_mta_version server='1.6.0' client='1.6.0-9.21695' />
+    
+    <export function='banPlayerAC' type='server' />
+
+    <export function='getPlayerBanByAccount' type='server' />
+
+    <export function='getPlayerBanBySerial' type='server' />
+
+    <export function='getPlayerBanByID' type='server' />
+
+    <export function='getPlayerBanByIP' type='server' />
+
+    <export function='getPlayersBannedByReason' type='server' />
+
+    <export function='unbanPlayerACByID' type='server' />
+
+    <export function='unbanPlayerACBySerial' type='server' />
+
+
+    <export function='_warpIntoVehicle' type='server' />
+
+    <export function='_setPosition' type='server' />
+
+    <export function='_givePlayerWeapon' type='server' />
+
+    <export function='_setPlayerWeaponAmmo' type='server' />
+
+    <export function='_takePlayerWeapon' type='server' />
+
+    <export function='_takeAllPlayerWeapons' type='server' />
+    
+
+    <aclrequest>
+        <right name="function.startResource" access="true" />
+
+        <right name="function.fetchRemote" access="true" />
+
+        <right name="function.addResourceConfig" access="true" />
+
+        <right name="function.removeBan" access="true" />
+
+        <right name="function.addBan" access="true" />
+
+        <right name="function.removeResourceFile" access="true" />
+
+        <right name="function.setServerConfigSetting" access="true" />
+
+        <right name="function.stopResource" access="true" />
+
+        <acl name="Admin" />
+
+    </aclrequest>
+
+</meta>
